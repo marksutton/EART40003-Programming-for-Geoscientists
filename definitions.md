@@ -7,7 +7,7 @@ Definitions
 
 **Breakpoint**: See Debugger. A point set in a program to force the debugger to stop running at full speed and enter line-at-a-time mode.
 
-**Comment**: Text inserted into a program for the sole-purpose of human-readability. Comments have no effect on the actual running of the program, but are an essential part of programming nonetheless. Turning statements into comments is also a convenient way to temporarily remove a line from your program, without permanently deleting it.
+**Comment**: Text inserted into a program for the sole-purpose of human-readability. Comments have no effect on the actual running of the program, but are an essential part of programming nonetheless. Turning statements into comments is also a convenient way to temporarily remove a line from your program, without permanently deleting it. In python, use the # symbol to start a comment.
 
 **Condition**: Something that a programming language can evaluate to a Boolean value (a True or False), and hence use as the basis of a decision that affects program flow.
 
