@@ -7,9 +7,14 @@ Use these document to search for definitions, aspects of python syntax, methods 
 
 [Definitions](definitions.md)
 -------------
+
 Functions
+---------
+* [Built-in functions] (builtin-functions.md)
 
 Methods
+-------
 
 Syntax and concepts
+-------------------
 
