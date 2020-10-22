@@ -99,7 +99,7 @@ print("String s is %s” % (s))                 # prints ‘String s is hello’
 s2 = "%g,%g" % (b, 10.2)                      # sets s2 to ‘3.553,10.2’
 s2 = "%g,%g" % (b, s)                         # ILLEGAL - %g can’t display string s
 print("b to 2dps is %.2f" % (b))              # prints ‘b to 2dps is 3.55’
-print("b to 1dp is %.2f" % (b))               # prints ‘b to 1dp is 3.6’
+print("b to 1dp is %.1f" % (b))               # prints ‘b to 1dp is 3.6’
 print("b x 1000 is %.1e" % (b*1000))          # prints ‘3.6e+03’ (meaning 3.6 x 103)  
 print("A big number: %d” % (100000000))       # prints ‘A big number: 100000000’
 </pre>
