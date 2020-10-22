@@ -5,8 +5,8 @@ This site is intended as a 'rolling reference' for the ESE module EART40003 Prog
 
 Use these document to search for definitions, aspects of python syntax, methods and functions etc that we have covered.
 
-Definitions
-
+[Definitions](definitions.md)
+-------------
 Functions
 
 Methods
