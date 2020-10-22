@@ -17,7 +17,7 @@ Methods
 Syntax and concepts
 -------------------
 * [Operators](operators.md)
-* [Variable names](variables.md)
+* [Variable and variable names](variables.md)
 * [Strings](strings.md)
 * [if/elif/else](if.md)
 * [Conditions](conditions.md)
