@@ -20,10 +20,10 @@ ii) Using a comparison operator.
 * \=\=, !\=      equal to, not equal to. Can use on any types (including strings)  
 
 <pre>a > 10</pre>
-True is a is more than 10, false if a is 10 or lower  
+True is a is more than 10, False if a is 10 or lower  
 
 <pre>b <= 10</pre>
-True if b is less than 10, false if b is 10 or higher  
+True if b is 10 or less, False if b is higher than 10  
 
 <pre>a == b</pre>
 True if the values of a and b are precisely equal, otherwise False. Note two = signs!  
