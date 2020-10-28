@@ -24,7 +24,7 @@ Syntax and concepts
 * [if/elif/else](if.md)
 * [Loops](loops.md)
 * [Operators](operators.md)
-* [Objects](object.md)
+* [Objects](objects.md)
 * [Strings](strings.md)
 * [Variable and variable names](variables.md)
 
