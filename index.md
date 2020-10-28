@@ -14,7 +14,7 @@ Use these documents to search for definitions, aspects of python syntax, methods
 Methods
 -------
 * [str methods](str_methods.md)
-* [float methods](float_methods.md)
+* [float/int/bool methods](float_methods.md)
 
 
 Syntax and concepts
