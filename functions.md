@@ -1,7 +1,7 @@
 Python Functions
 =========================
 
-Note - this page only lists functions - for methods of objects, see the [methods](methods.md) page.
+Note - this page only lists functions - for methods of objects, see the methods section of the [index page](index.md) page.
 
 ------------
 
