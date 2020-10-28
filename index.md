@@ -19,10 +19,12 @@ Methods
 
 Syntax and concepts
 -------------------
-* [Operators](operators.md)
-* [Variable and variable names](variables.md)
-* [Strings](strings.md)
-* [if/elif/else](if.md)
 * [Conditions](conditions.md)
+* [Exception handling - try/except](error.md)
+* [if/elif/else](if.md)
 * [Loops](loops.md)
+* [Operators](operators.md)
+* [Objects](object.md)
+* [Strings](strings.md)
+* [Variable and variable names](variables.md)
 
