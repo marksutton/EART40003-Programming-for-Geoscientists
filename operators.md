@@ -32,6 +32,13 @@ e = a + "?"  # If a is a string, put a ? on the end of it and assign that to var
              # If a is a number this will give an error for the same reason as above.
 </pre>
 
++ can also be used to join lists:
+
+<pre>
+print([1, 2, 4] + [5, 8, 10])  # Prints [1, 2, 4, 5, 8, 10]
+</pre>
+
+
 \- operator
 ----------
 Performs subtraction. Can only be used on numbers (not strings). 
