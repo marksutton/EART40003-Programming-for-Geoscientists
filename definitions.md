@@ -3,6 +3,8 @@ Definitions
 
 **Argument**: See Function
 
+**Array**: A simple type of *container* not actually available in Python (though see Numpy arrays in session 7), but commonly used in other languages. Arrays are a bit like lists, but (a) often have a fixed number of elements, and (b) normally require all elements to be of the same type.
+
 **Boolean**: A Boolean value (named after the mathematician George Bool) is one that can only have one of two values, normally expressed as True or False.
 
 **Breakpoint**: See Debugger. A point set in a program to force the debugger to stop running at full speed and enter line-at-a-time mode.
@@ -11,9 +13,15 @@ Definitions
 
 **Comment**: Text inserted into a program for the sole-purpose of human-readability. Comments have no effect on the actual running of the program, but are an essential part of programming nonetheless. Turning statements into comments is also a convenient way to temporarily remove a line from your program, without permanently deleting it. In python, use the # symbol to start a comment.
 
+**Comprehension**: A Python term for a syntax-construction that enables you to do certain container iteration tasks with very little typing. See syntax section below for list comprehensions. Depending on who you ask, comprehensions are either wonderful labour-saving constructions that make everyone's life easier, or hellish syntactical minefields that wreck code-readability and hamper debugging. I tend to lean towards the latter view!
+
 **Condition**: Something that a programming language can evaluate to a Boolean value (a True or False), and hence use as the basis of a decision that affects program flow.
 
+**Container** (or *container class*, or *collections class*, or *iterable* – you can treat these as synonyms): An object comprising multiple elements. The most obvious and useful example in Python is the list class – lists contain a number of elements in some defined order, referred to by their index number. Other containers exist (sets, dictionaries and tuples are the most commonly encountered ones – not dealt with this week – plus an odd list-like one that is returned by the range function – see below)
+
 **Debugger**: A debugger (properly symbolic debugger) is a piece of software that enables a programmer to step through a program line-at-a-time, watching variable values, and following exactly what their program is doing. This is not the only way to debug a program, but is often the easiest way. Debuggers can either be set to set through programs when the user presses a key, or to run the program as normal (full-speed mode) until it reaches a predefined point (a breakpoint). The debugger built into VSCode always starts in full-speed mode, but setting a breakpoint on the first line will force it to stop and enter line-at-a-time mode straight away.
+
+**Element**: an individual item in a *container*. 
 
 **Exception**: An error that occurs during program execution (we say that the exception is *thrown*). In Python, exceptions have a type, and you can check for particular types of error using *try / except* (see syntax section)
 
@@ -31,9 +39,15 @@ Definitions
 
 **Import**: Bring a library into your program so you can use it.
 
+**Iterable**: A Python term for anything that can be iterated over – in practice, this is much the same thing as a container.  
+
+**Iterating**: looping. We often talk about 'iterating over a list', which means executing a loop to look at each element in turn.
+
 **Library**: A pre-written set of functions for some particular purpose or set of purposes that you can bring into your program (import). There are many many libraries for python already installed on your computer.
 
 **Linting**: Automatic checking of code for ‘style issues’ or errors, underlining them in red. Flake8 is the linter used in this course. Linting will not only flag up mistakes, but will also flag up ways in which your code isn’t quite laid out according to standards. These might (will!) all seem like very minor issues, but consistently laid out code really is easier for other people to read, so try to follow these rules.
+
+**List**: A simple type of *container* class. See syntax section for details of Python lists.
 
 **Method**: a function provided as part of a class, intended to work on the data of that class. For instance, capitalize() is a method of the Python str class – it returns a version of the string with an initial capital letter.
 
