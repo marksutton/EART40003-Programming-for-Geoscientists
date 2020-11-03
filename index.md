@@ -15,14 +15,16 @@ Methods
 -------
 * [str methods](str_methods.md)
 * [float/int/bool methods](float_methods.md)
-
+* [list methods](list_methods.md)
 
 Syntax and concepts
 -------------------
+* [Breaking long lines](breaking_lines.md)
 * [Conditions](conditions.md)
 * [Exception handling - try/except](error.md)
 * [if/elif/else](if.md)
-* [Loops](loops.md)
+* [Lists](lists.md)
+* [Loops - while and for](loops.md)
 * [Operators](operators.md)
 * [Objects](objects.md)
 * [Strings](strings.md)
