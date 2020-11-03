@@ -18,11 +18,17 @@ These are methods not functions, so the syntax uses the ‘.’ after an object 
 **isnumeric() return type: bool**
 <br />Returns True if all characters in the string are digits, otherwise returns False
 
+**join(container) return type: string**
+The opposite of *split*. Join takes a container (e.g. a list, normally a list of strings) as an argument and joins all the elements together into a single string, using the object string as a separator. For example, `",".join(["goodbye", "cruel", "world"])` returns the string "goodbye,cruel,world".
+
 **lower() return type: str**
 <br />Returns a copy of the string with all characters converted to lowercase.
 
 **replace(oldtext, newtext) return type: str**
 <br />Returns a copy of the string in which all occurrences of the text oldtext are replaced with newtext. 
+
+**split(split_on) return type: list (of strings)**
+Splits a string on the substring split_on into a list of strings. For example, `"goodbye cruel world".split(" ")` returns `["goodbye", "cruel", "world"]`. split_on is normally one a one-character string, but it doesn't have to be. 
 
 **strip() return type: str**
 <br />Returns a copy of the string with any whitespace characters (spaces, tabs, newlines) removed from both the start and end
