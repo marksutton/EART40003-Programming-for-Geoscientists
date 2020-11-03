@@ -65,6 +65,18 @@ False if a is more than 10, True if a is 10 or lower
 <pre>not (a == b)</pre>
 False if the values of a and b are precisely equal, otherwise True. This is precisely equivalent to `a != b`.  
 
+**'in' conditions**
+
+A nice simple feature! You can use the keyword in to find out whether an element is in a list (or in any type of container class). The condition:
+
+`check_element in container`
+
+is True if there is one of more element in container matching the check_element. e.g.
+
+<pre>if "one" in number_list:
+    print("'One' found in the list")
+</pre>
+
 Common errors to watch out for with conditions:
 -------
 * Using a single equals sign. Single equals assigns values to variables. Use double equals for comparisons.
