@@ -31,17 +31,21 @@ Definitions
 
 **Floating point number**: The normal method of storing non-integer numbers in a computer. Floating point numbers are stored in a mantissa/exponent format (like 10.43223 x 10<sup>12</sup>, except they use powers of 2 not 10). You don’t need to understand the details of how they are stored, but there are some important consequences of this that you DO need to understand, that arise because they only are approximations to the real numbers they represent. There may be tiny errors in results of calculations arising from this imprecision. Remember in Session 1 when we divided 10 by 3 and got 3.333333333333**5**? That 5 arose from floating point inaccuracies. Precision depends on magnitude, so if (for instance) you add 1 to a huge floating point number (10<sup>100</sup> for instance) you may find that the result is still 10<sup>100</sup> not 10<sup>100</sup>+1 – the precision available may not be enough to tell the difference. You may also find the occasional result like 7.9999999999 from a calculation where you expected 8. **Most critically**, avoid EVER using == or != comparisons on floating point numbers. 2.0 + 2.0 == 4.0 may not always evaluate to True (because 2.0 + 2.0 might evaluate to 3.99999999999999, which is not quite 4.0). 
 
-**Function**: a separate piece of code that ‘does something’. Functions usually have to be given (passed) one or more values to work on. These passed values are called arguments. Many functions also pass a value back to the main program than launched (called) them. Some functions you will create yourself. Others are built into python (e.g. the print function). Others are written by third parties, and you have import them. Python function syntax (much the same as in all programming languages) is explained in the Syntax section.
+**Function**: a separate piece of code that ‘does something’. Functions usually have to be given (passed) one or more values to work on. These passed values are called arguments. Many functions also pass a value back to the main program than launched (called) them. Some functions ('user defined functions') you will create yourself. Others are built into python (e.g. the print function). Others are written by third parties, and you have import them. Python function syntax (much the same as in all programming languages) is explained in the Syntax section.
 
 **Integer**: A whole number. In computing, an integer is a whole number stored in a specific binary format, using a particular number of bits (binary digits). Most languages use a set number of bits for this (32 or 64 typically), which means that integers can ‘overflow’ if they get too large (too large means in the billions at the very least). Python integers never overflow – they expand in size in memory to be as big or as small as they need to be. This makes life easy for us in this course, but if you ever move to another language, remember that integers may have limits. 
 
 **Integrated Development Environment (IDE)**: A program/application (same thing) designed to bring all the tools you need for programming into one place, and to make the life of a programmer as easy as possible. VScode is the IDE we are using for this course. Use of an IDE in programming is optional.
 
-**Import**: Bring a library into your program so you can use it.
+**Import**: The process of bringing a module, package or library into your program so you can use it – this is a general term used in many languages, though most don’t actually use the keyword ‘import’ to do it (Python does).
 
 **Iterable**: A Python term for anything that can be iterated over – in practice, this is much the same thing as a container.  
 
 **Iterating**: looping. We often talk about 'iterating over a list', which means executing a loop to look at each element in turn.
+
+**Keyword Argument** (commonly abbreviated to kwarg): An alternative syntax for passing arguments to functions or methods. Using kwargs allows you to put arguments in any order, and by providing names for them in your function call, to improve code readability. Not all built-in functions support kwargs, but you can always use them with user-defined functions.
+
+**Kwarg**: Abbreviation of Keyword Argument
 
 **Library**: A pre-written set of functions for some particular purpose or set of purposes that you can bring into your program (import). There are many many libraries for python already installed on your computer.
 
@@ -50,6 +54,9 @@ Definitions
 **List**: A simple type of *container* class. See syntax section for details of Python lists.
 
 **Method**: a function provided as part of a class, intended to work on the data of that class. For instance, capitalize() is a method of the Python str class – it returns a version of the string with an initial capital letter.
+
+**Module** (or package, or library): A set of functions (and other stuff*) that you can import into your program to provide extra functionality. Package and library are not quite synonyms of module, as both terms can be used for groups of related modules as well as single one. In python, at it’s simplest, a module is simply a .py file in which functions are defined. 
+*The ‘other stuff’ sometimes includes definitions of constants (e.g. math.Pi), and definitions of classes with methods for complex data-types.
 
 **Nesting**: Putting a program structure inside another program structure. Pretty well anything can be nested in programming, including function calls, if statements, loops etc. Nesting takes two forms in Python. Nesting within expressions - e.g. `float(input("hello"))` – consists of brackets within brackets (innermost always happens first). Nesting of control structures (if, while etc.) is done using indentation. Most languages encourage this indentation for readability, but in in Python it is mandatory.
 
@@ -71,7 +78,11 @@ Definitions
 
 **Syntax Error**: A programming error that is detected before the program runs… things like missing brackets or colons, or other unambiguously illegal code.
 
+**Tuple**: Tuples are ‘lightweight lists’ – they work a lot like lists, except that you can’t change them once they have been created. They are used for, among other things, returning multiple values from functions. Tuples do exist in some other languages, but far from all.
+
 **Type**: (of variables or other data). The type of information stored, and/or the coding scheme used to store them. Understanding what type your variables are is critical to understanding what is going on in a program. Simple variable types in Python are `int` (short for Integer), `float` (short for Floating point number), `bool` (short for Boolean, i.e. a True/False variable) and `str` (string). 
+
+**User Defined Function**: A function that you write, as part of your program.
 
 **Variable**: A variable is best thought of as a box in the computer’s memory which can store some value for you to do something with later. Variables have names which the programmer assigns – these should be chosen to aid readability of the program, i.e. they should give at least a hint as to what the value is used for (e.g. age_in_years, not just a). Variables have a ‘type’ – the sort of value they hold (e.g. a string or a number – it’s actually much more complex than that, but that will do for now). Once you put a value into a variable, it stays there until the program finishes, or until you put a new value into it.
 
