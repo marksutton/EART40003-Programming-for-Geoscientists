@@ -16,6 +16,7 @@ Methods
 * [str methods](str_methods.md)
 * [float/int/bool methods](float_methods.md)
 * [list methods](list_methods.md)
+* Methods for most imported modules are not provided - google them!
 
 Syntax and concepts
 -------------------
@@ -25,6 +26,7 @@ Syntax and concepts
 * [if/elif/else](if.md)
 * [Lists](lists.md)
 * [Loops - while and for](loops.md)
+* [Importing modules](import.md)
 * [Operators](operators.md)
 * [Objects](objects.md)
 * [Strings](strings.md)
