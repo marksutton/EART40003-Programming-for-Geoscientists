@@ -25,7 +25,7 @@ Syntax and concepts
 * [Exception handling - try/except](error.md)
 * [if/elif/else](if.md)
 * [Functions](userfunctions.md)
-* [Keywork arguments (kwargs](kwargs.md)
+* [Keywork arguments (kwargs)](kwargs.md)
 * [Lists](lists.md)
 * [Loops - while and for](loops.md)
 * [Importing modules](import.md)
