@@ -42,13 +42,16 @@ number like 2.5 into an integer. Note that the function rounds DOWN towards zero
 If the value cannot be converted (e.g. "4.5" can be converted, "Forty-two" cannot), the int function will throw an error and stop the program.
 
 **len(str OR container) return type: integer [built-in]**
-Len gives you the lenth of something. If you give it a string as an argument, it returns the number of characters in the string. This is one of the few string functions which is a normal function, rather than a method of str – so use it like `len("hello")` not `"hello".len()`. If you pass it a container (e.g. a list) it returns the number of elements in the container.
+Len gives you the lenth of something. If you give it a string as an argument, it returns the number of characters in the string. This is one of the few string functions which is a normal function, rather than a method of str – so use it like `len("hello")` not `"hello".len()`. If you pass it a container (e.g. a list or dictionary or set) it returns the number of elements in the container.
 
 **min(container) return type: varies [built-in]**
-Use on any container (e.g. a list) to find the minimum value. Works on numerical and string elements – for string elements, it will give you the alphabetically first value.
+Use on any container (e.g. a list) to find the minimum value. Works on numerical and string elements – for string elements, it will give you the alphabetically first value. Works on dictionaries, but looks at keys not values.
 
 **max(container) return type: varies [built-in]**
-Use on any container (e.g. a list) to find the maximum value. Works on numerical and string elements – for string elements, it will give you the alphabetically last value.
+Use on any container (e.g. a list) to find the maximum value. Works on numerical and string elements – for string elements, it will give you the alphabetically last value. Works on dictionaries, but looks at keys not values.
+
+**open(filename, mode) return type: file [built-in]**
+Tries to open the file with the given filename, in the given mode. Both arguments must be strings. See below for notes on filenames. Mode is a single-character string – it should be “w” for write-mode, “r” for read-mode, or “a” for append mode (append mode is like write mode, but if the file already exists then new data is appended to the end – in write mode it is overwritten). If the file can’t be opened (see below for possible reasons) an exception will be thrown. The open function returns a file object, which is then used for all further file operations – see [file methods](file_methods.md) document.
 
 **ord(string) return type: int [built-in]**
 Takes a string of length 1 (i.e. a single-character string) and returns the ASCII code representing it - see e.g. [http://www.asciitable.com/](http://www.asciitable.com/) for a list of codes). Will give an error if the string isn’t length 1.
