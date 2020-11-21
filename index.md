@@ -25,8 +25,10 @@ Syntax and concepts
 -------------------
 * [Breaking long lines](breakinglines.md)
 * [Conditions](conditions.md)
+* [Dictionaries](dictionaries.md)
 * [Exception handling - try/except](error.md)
 * [if/elif/else](if.md)
+* [Files](files.md)
 * [Functions](userfunctions.md)
 * [Keywork arguments (kwargs)](kwargs.md)
 * [Lists](lists.md)
@@ -34,6 +36,7 @@ Syntax and concepts
 * [Importing modules](import.md)
 * [Operators](operators.md)
 * [Objects](objects.md)
+* [Sets](sets.md)
 * [Strings](strings.md)
 * [Tuples](tuples.md)
 * [Variable and variable names](variables.md)
