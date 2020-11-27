@@ -50,7 +50,7 @@ Methods
 See the [methods section](dict_methods.md) for a list of useful methods. The most important is probably 
 update, which adds an entire new dictionary to the first, but can also be used to add single items, like so:
 
-<pre>digit_dict.update({"ten",10})  # add another key/value pair to digit_dict
+<pre>digit_dict.update({"ten": 10})  # add another key/value pair to digit_dict
 </pre>
 
 Note that this needs the curly brackets, as what you are actually doing is making a new dictionary (here of length 1) and then adding it to the original one.
