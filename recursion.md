@@ -1,3 +1,6 @@
+Recursion
+==========
+
 Recursion is a programming trick that involves functions that call themselves. It’s only appropriate for some types of problem, but where 
 it is appropriate it’s typically the most elegant and easiest way to proceed – once you’ve got your head round it. 
 Recursion is a (fairly) advanced technique, and is only ‘on the edge’ of the syllabus of this module – you should be aware 
