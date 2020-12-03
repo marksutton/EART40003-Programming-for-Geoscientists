@@ -3,6 +3,8 @@ Python Functions
 
 Note - this page only lists functions - for methods of objects, see the methods section of the [index page](index.md).
 
+There are separate files for numpy and matplotlib functions!
+
 ------------
 
 Functions are given as:
