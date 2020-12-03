@@ -8,7 +8,10 @@ Use these documents to search for definitions, aspects of python syntax, methods
 [Definitions](definitions.md)
 -------------
 
-[Functions](functions.md)
+Functions
+---------
+* [Python (and imageio) Functions](functions.md)
+* [Numpy functions](numpy_functions.md)
 ---------
 
 Methods
@@ -17,6 +20,7 @@ Methods
 * [file methods](file_methods.md)
 * [float/int/bool methods](float_methods.md)
 * [list methods](list_methods.md)
+* [numpy array methods](numpy_array.md)
 * [set methods](set_methods.md)
 * [str methods](str_methods.md)
 * Methods for most imported modules are not provided - google them!
@@ -34,8 +38,10 @@ Syntax and concepts
 * [Lists](lists.md)
 * [Loops - while and for](loops.md)
 * [Importing modules](import.md)
+* [Numpy arrays](numpy.md)
 * [Operators](operators.md)
 * [Objects](objects.md)
+* [Recursion](recursion.md)
 * [Sets](sets.md)
 * [Strings](strings.md)
 * [Tuples](tuples.md)
