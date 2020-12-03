@@ -20,7 +20,7 @@ Methods
 * [file methods](file_methods.md)
 * [float/int/bool methods](float_methods.md)
 * [list methods](list_methods.md)
-* [numpy array methods](numpy_array.md)
+* [numpy array methods](numpy_methods.md)
 * [set methods](set_methods.md)
 * [str methods](str_methods.md)
 * Methods for most imported modules are not provided - google them!
