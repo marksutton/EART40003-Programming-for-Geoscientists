@@ -1,7 +1,7 @@
 Introduction
 ============
 
-This site is intended as a 'rolling reference' for the ESE module EART40003 Programming for Geoscientists. It will be expanded each week to include the new reference information provided as separate PDFs.
+This site is intended as a 'rolling reference' for the ESE module EART40003 Programming for Geoscientists. It now contains material from the whole course.
 
 Use these documents to search for definitions, aspects of python syntax, methods and functions etc that we have covered.
 
@@ -12,6 +12,8 @@ Functions
 ---------
 * [Python (and imageio) Functions](functions.md)
 * [Numpy functions](numpy_functions.md)
+* [Matplotlib functions](matplotlib_functions.md)
+
 ---------
 
 Methods
@@ -38,6 +40,7 @@ Syntax and concepts
 * [Lists](lists.md)
 * [Loops - while and for](loops.md)
 * [Importing modules](import.md)
+* [Matplotlib - graphing](matplotlib.md)
 * [Numpy arrays](numpy.md)
 * [Operators](operators.md)
 * [Objects](objects.md)
