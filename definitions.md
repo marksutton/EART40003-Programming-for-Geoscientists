@@ -45,9 +45,14 @@ Definitions
 
 **Import**: The process of bringing a module, package or library into your program so you can use it – this is a general term used in many languages, though most don’t actually use the keyword ‘import’ to do it (Python does).
 
+**iPython**: Short for Interactive Python. iPython (or iPython notebooks) is an older name for what has now morphed into Jupyter Notebooks, though it’s not quite that simple -  the Jupyter Notebooks project is really a split-off from iPython, which also still exists and is used by some people. You are more likely to come across Jupyter Notebooks though, so I’ve defined it all there…
+
 **Iterable**: A Python term for anything that can be iterated over – in practice, this is much the same thing as a container.  
 
 **Iterating**: looping. We often talk about 'iterating over a list', which means executing a loop to look at each element in turn.
+
+**Jupyter Notebook**: Jupyter Notebooks (JNs) are a different way of running python code, interspersing it with text and graphics and enabling you to run bits of it at a time, rather than just running single programs. The idea is that this enables you to better document what you are doing, and easily share this with others, as well as to break your code up into small chunks that you can look at the results of separately. JN files have the .ipynb extension, as Jupyter Notebooks have evolved from the older but very similar iPython concept. JNs are currently very trendy and you probably come across them at some point, but in this course I simply introduce you to them in concept, and I will demonstrate one in class. While there are a lot of advantages to working this way, using JNs does remove some of the conveniences of an IDE like VSCode (such as the debugger), and for this reason I don’t think they are the best environment in which to first learn the language. Once you are familiar with Python though, there is a lot to be said for working in this way, and the switch-over is not hard.
+<br />JNs are run within a web-browser, but confusingly that doesn’t always mean they are running the python remotely in the cloud, or that you can run them with a web-browser without setting things up first. The ‘traditional’ way to run them is to set up a Jupyter Notebooks system on your machine (e.g. there is one included in Anaconda), and to start the notebook through that system, running it locally on your computer. Alternatively, there are now cloud-based JN systems, notably through Microsoft Azure, or using Google Colab. These are a bit easier in that there is no set-up work. To create a Google Jupyter Notebook for instance (assuming you have a google account), just go to your Google Drive on a web-browser, click New and then More, then select ‘Google Colaboratory’. One catch with these cloud-based systems though is that if you want to use files, you’ll need to upload those to the cloud, and use the correct google modules in python to access them. Not that hard in practice, but it’s extra faff.
 
 **Keyword Argument** (commonly abbreviated to kwarg): An alternative syntax for passing arguments to functions or methods. Using kwargs allows you to put arguments in any order, and by providing names for them in your function call, to improve code readability. Not all built-in functions support kwargs, but you can always use them with user-defined functions.
 
@@ -58,6 +63,8 @@ Definitions
 **Linting**: Automatic checking of code for ‘style issues’ or errors, underlining them in red. Flake8 is the linter used in this course. Linting will not only flag up mistakes, but will also flag up ways in which your code isn’t quite laid out according to standards. These might (will!) all seem like very minor issues, but consistently laid out code really is easier for other people to read, so try to follow these rules.
 
 **List**: A simple type of *container* class. See syntax section for details of Python lists.
+
+**Matplotlib**:  A very commonly used graphing/plotting/charting package for python, with support for pretty well any type of graph you would ever want to produce. It’s also pretty easy to use, though not without its little quirks. See [matplotlib section](matplotlib.md) and also [matplotlib functions](matplotlib_functions.md).
 
 **Method**: a function provided as part of a class, intended to work on the data of that class. For instance, capitalize() is a method of the Python str class – it returns a version of the string with an initial capital letter.
 
