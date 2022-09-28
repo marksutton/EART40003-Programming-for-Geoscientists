@@ -21,12 +21,13 @@ First, you DO need the extension (the .csv). Be aware that Windows, by default,
 hides file extensions so you can't see them - it really shouldn't, but it does. So if you look in Windows Explorer, 
 you'll probably see that the file is just called 'myfile'. The extension (.csv in this case) IS there though, and you need it to read it in Python. 
 Consider turning off the Windows extension-hiding feature. It's one of the first things I do whenever I get a new machine. 
-Second – you may need a 'path' to the file. Python will look in the working folder that you specified when you set up VSCode, 
-and if the file isn't there, it won't be able to open it. If it's in a folder 
-underneath that (for instance my files for this session are in 'Session6' under my root programming folder), just use the name of that folder, thus:
+Second – you may need a 'path' to the file. Python will look in the working folder - if you are using Spyder this should be the 
+folder that your .py file is in, which it flags up as the 'wdir' when you run a program (e.g. wdir='C:/Users/markd/.spyder-py3'). If your file is in a folder underneath  that you can just use the foldername with a / separator, thus...
 
 <pre>data_file = open("Session6/myfile.csv", "w")
 </pre>
+
+... will open a file called myfile.csv in the Session6 folder within the working folder.
 
 Alternatively you can use an 'absolute' path – something like
 
@@ -47,7 +48,7 @@ Another very annoying complication with paths occurs on Windows system. Almost a
 
 will fail – Python thinks `\p` ,`\S` and `\m` are special characters, and gets confused.
 
-To get round this, you can either use forward slashes (python is clever enough to know it’s on a Windows system and turn them into backslashes behind the scenes to make the system open the file), OR use double backslashes, which is the standard way to put an actual backslash character into a string (this is the same principle as using %% for a % symbol, as a single % is used to start a placeholder). So
+To get round this, you can either use forward slashes (python is clever enough to know it’s on a Windows system and turn them into backslashes behind the scenes to make the system open the file), OR use double backslashes, which is the standard way to put an actual backslash character into a string). So
 
 <pre>data_file = open("C:\\programming\\Session6\\myfile.csv", "w")
 </pre>
