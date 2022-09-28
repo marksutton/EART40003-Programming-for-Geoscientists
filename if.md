@@ -22,7 +22,7 @@ else:                      [else block is optional]
 
 Common errors to watch out for with if’s:
 ---------------------
-* Frgetting the colon (‘:’) at the end of the if / elif / else line. This is required.
+* Forgetting the colon (‘:’) at the end of the if / elif / else line. This is required.
 * Forgetting to indent. Python absolutely needs indents to tell it which statements are in which block
 * Unreachable blocks. For instance, if your ‘if’ condition is ‘a > 5’, an elif block with a condition of ‘a > 10’ will never be executed – if a > 10 it’s also > 5, so the initial if block will run, not the elif block
 * Condition errors – see conditions section.
