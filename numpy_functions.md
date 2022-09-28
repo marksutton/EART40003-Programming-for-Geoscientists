@@ -7,7 +7,7 @@ These are provided by the numpy module - so you will need to import it! if you u
 
 Then you will need to prefix all functions with `np.`
 
-Note that there alos a few methods of the array class - see [numpy array methods](numpy_methods.md) for these.
+Note that there also a few methods of the array class - see [numpy array methods](numpy_methods.md) for these.
 
 ------------
 
