@@ -17,7 +17,7 @@ Variable names are case sensitive – so `MyVariable` is NOT the same variable a
 
 Variable names should be meaningful – they should help someone reading your code understand what the variable is used for. 
 Avoid single-letter variables (I’ve used some in some examples to save space, or where the example doesn't make clear what the value really represents, but you shouldn't). 
-Don’t worry about how long it takes to type longer names – VSCode has an auto-fill feature that will bring them up for you if you start typing – 
+Don’t worry about how long it takes to type longer names – Spyder has an auto-fill feature that will bring them up for you if you start typing – 
 but a good maximum length though would be ~20 characters. 
 Where variable names incorporate multiple words (recall that you can’t use spaces), 
 avoid just running them together (so `accelerationduetogravity` is bad – it’s hard to read). In these cases you can use either:
