@@ -1,7 +1,7 @@
 Breaking up long lines
 =====================
 
-Sometimes your lines will get too long (flake8 will complain, and it IS best to avoid them). 
+Sometimes your lines will get too long - you should keep them under 80 characters. 
 You can break lines with \ like so:
 
 <pre>variable_with_a_possibly_over_verbose_name =\
@@ -10,11 +10,11 @@ You can break lines with \ like so:
 
 Or inside brackets, or square brackets, you can just put a line break in without worrying, e.g. 
 
-<pre>print(“this is a number %g” 
-      % (my_number))
+<pre>a = (100 + b
+          * c + 20)
 </pre>
 
-If you do this, flake8 likes the continuation to line up with the first character under the bracket on the line above.
+If you do this, stylistically the continuation should line up with the first character under the bracket on the line above.
 
 Breaking lines that contain long strings is harder. If you have
 
@@ -36,3 +36,10 @@ print("this is a very very very very very very very "
       "very very very very very very very very very "
       "very very long string")
 </pre>
+
+Note as well that 'f' strings need a new 'f' on each line, so
+<pre>
+print(f"{variable1} and "
+      f"{variable2}")
+</pre>
+
