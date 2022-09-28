@@ -75,38 +75,26 @@ a = b ** c         # work out b to the power of c, put result in a
 
 % operator
 ----------
-Does COMPLETELY different things with numbers and strings! 
-<br />
+
 For numbers, it performs a modulus calculation (i.e. works out the remainder of a division). 
-For strings, it allows the insertion of values into the string using formatted output. 
-Put the ‘base’ string to the left of the %, and include placeholders (see below). 
-To the right of the %, put the values to go into the string, inside brackets, and separated by commas (
-technically this is a tuple – more on tuples later in the course). Common placeholders are:
-<br />
-* %g: use to just insert numbers without playing with decimal places at all. Note that for big numbers, Python will revert to exponent format (see %e below), which you might not want, so for integers you can use…
-* %d: use to display an integer, i.e. a number without decimal places. %g works for integers as well, but %d never uses exponent format (see %e below). 
-* %f: use to control the number of decimal places. Normal format is %.nf, where n is the number of decimal places you want. E.g. %.3f for three decimal places.
-* %e: use for exponent (‘scientific’) format – good for very large or very small numbers. You can specify the number of decimal places you want. E.g. %.2e gives you exponent format with two decimal places. As this is output as text (without superscripts) it can’t generate this as something like 3.56 x 103. Instead you get 3.56e3 or 3.56e03, which is meant to mean the same thing. 
-* %s: use to insert a string (obviously you have to make sure the value passed is a string)
-<br />
-NOTE – because % has a special meaning in strings – if you want an actual percent symbol, you use %%. See e.g. https://www.python-course.eu/python3_formatted_output.php 
-for a more complete list of examples and format ‘placeholders’ (and for another way of doing formatting – the % method is not the only one available). 
 <pre>
 print(15 % 6)      # print the remainder when dividing 15 by 6 (3)
 a = b % c          # calculate the remainder from dividing b by c, assign it to a.
                    # this assumes b and c are both numbers 
 </pre>
-<br />
-[String examples below assume variable b holds number 3.553, variable s holds string “hello”]
-<pre>		
-print("Value is %g" % (10.2))                 # prints ‘Value is 10.2’
-print("Values are %g and %g” % (10.2, 5.3))   # prints ‘Values are 10.2 and 5.3’
-print("b is %g%%” % (b))                      # prints ‘b is 3.553%’
-print("String s is %s” % (s))                 # prints ‘String s is hello’
-s2 = "%g,%g" % (b, 10.2)                      # sets s2 to ‘3.553,10.2’
-s2 = "%g,%g" % (b, s)                         # ILLEGAL - %g can’t display string s
-print("b to 2dps is %.2f" % (b))              # prints ‘b to 2dps is 3.55’
-print("b to 1dp is %.1f" % (b))               # prints ‘b to 1dp is 3.6’
-print("b x 1000 is %.1e" % (b*1000))          # prints ‘3.6e+03’ (meaning 3.6 x 103)  
-print("A big number: %d” % (100000000))       # prints ‘A big number: 100000000’
+
+For strings, it provides one of (several) ways of inserting values into  strings. This isn't the approach we are using in this course - it's less modern and convenient than the 'f string' approach - but you should be aware of it so you can understand other peoples's code.
+
+You'll see things like:
+<pre>
+print("Time taken: %f seconds" % (seconds_variable))
 </pre>
+
+This puts the value of *seconds_variable* in for the %f 'placeholder', and is equivalent to:
+<pre>
+print(f"Time taken: {seconds_variable} seconds")
+</pre>
+
+You will see more complicated placeholder than %f - these specify things like number of decimal places, and the type of the variable. You can look them up if you need to decypher them!
+
+**NOTE** – because % has a special meaning in strings (see above) – if you want an actual percent symbol, you use %%. This is a common 'gotcha'!
