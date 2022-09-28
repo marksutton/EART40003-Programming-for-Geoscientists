@@ -3,7 +3,7 @@ Functions and local/global variables
 
 Python functions look like:
 
-<ore>def function_name(argument_list):
+<pre>def function_name(argument_list):
     [indented statements forming the body of the function]
 </pre>
 
