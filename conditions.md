@@ -83,4 +83,4 @@ Common errors to watch out for with conditions:
 * Missing off a variable name in second condition of an and/or. This is a very common ‘rookie’ error, because in English, `a>10 or <0` makes perfect sense. It doesn’t to Python. You need a > 10 or a < 0.
 * Misunderstanding order of evaluation of complex conditions – see above – use brackets to control it, don’t assume you know which order things happen in. 
 * Mixing types in an illegal way, e.g. `a < 5` is illegal if a is a string
-* Trying to do precise (\=\= or !\=) comparisons with floating point (i.e. non-integer) numbers. These don’t always work. This is a counterintuitive and complex issue, which we will cover properly next week. Ignore for now… but keep it at the back of your mind.
+* Trying to do precise (\=\= or !\=) comparisons with floating point (i.e. non-integer) numbers. These don’t always work. This is a counterintuitive and complex issue, and relates to the way in which floating point numbers are stored. The simple rule is - avoid checking equality with floating point.
