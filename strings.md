@@ -15,7 +15,7 @@ In the second example python will treat `Hello` as a variable name and try to fi
 
 Manipulating strings
 -----------------
-You can add strings to join them together with the \+ operator. To mix numbers and text together into a string, use the % operator. See [operators](operators.md) for more details
+You can add strings to join them together with the \+ operator. To mix numbers and text together into a string, use 'f strings' (see below).
 
 Line breaks
 --------
