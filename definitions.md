@@ -31,8 +31,6 @@ Definitions
 
 **File**: I hope you all know what a file is, but just in case… a file is a chunk of data stored on a computers permanent storage (hard disk, network drive, etc). Files have a 'type' – a hint to programs about what type of data is stored within, and how it's encoded. File types are indicated by the extension – the text after a '.' in the filename, so myfile.csv has a .csv extension, and is in csv (comma separated value) format. It is very common in scientific programming to want to process a file – read in data from the file, do something with that data, then either print some results or output processed results into a new file that you can then view in some other program (Excel perhaps). Programs that do the latter do not look exciting when running, but are very practical. In this course we will be concentrating on reading/writing .csv files.
 
-**Flake8**: The linting system for python that we are using in this course.
-
 **Float**: a shorthand for Floating Point Number.
 
 **Floating point number**: The normal method of storing non-integer numbers in a computer. Floating point numbers are stored in a mantissa/exponent format (like 10.43223 x 10<sup>12</sup>, except they use powers of 2 not 10). You don’t need to understand the details of how they are stored, but there are some important consequences of this that you DO need to understand, that arise because they only are approximations to the real numbers they represent. There may be tiny errors in results of calculations arising from this imprecision. Remember in Session 1 when we divided 10 by 3 and got 3.333333333333**5**? That 5 arose from floating point inaccuracies. Precision depends on magnitude, so if (for instance) you add 1 to a huge floating point number (10<sup>100</sup> for instance) you may find that the result is still 10<sup>100</sup> not 10<sup>100</sup>+1 – the precision available may not be enough to tell the difference. You may also find the occasional result like 7.9999999999 from a calculation where you expected 8. **Most critically**, avoid EVER using == or != comparisons on floating point numbers. 2.0 + 2.0 == 4.0 may not always evaluate to True (because 2.0 + 2.0 might evaluate to 3.99999999999999, which is not quite 4.0). 
@@ -91,6 +89,8 @@ Definitions
 
 **Set**: A Python container (=iterable, =collection) class, less commonly used than lists or dictionaries. Sets are the same things you've come across in maths – crucially, they can only contain one copy of a particular element. Intersection, Union etc. operations are possible. See syntax sections for details how to use them.
 
+**Spyder**: The Integrated Development Environment used in this module
+
 **Statement**: A line of a program that does something. Some statements will be function calls (e.g. a print line). Others may assign values to variables, start or end control structures like loops, or more. In python you only have one statement per line, but some other languages complicate this.
 
 **String**: text (called a string as text is a string of characters).
@@ -107,5 +107,4 @@ Definitions
 
 **Vectorization**: Vectorization is a programming technique allowing simple operations to be applied to every element of a container. Normal python containers (lists, dictionaries etc.) do not support vectorization, but numpy arrays do. Vectorization is a huge time-saver, both in terms of time spent writing code, and in execution speed.
 
-**Visual Studio Code / VSCode**: The Integrated Development Environment used in this module
 
