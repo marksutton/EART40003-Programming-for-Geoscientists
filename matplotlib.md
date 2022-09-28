@@ -86,4 +86,3 @@ This approach goes for all programming – writing complex things in one go is h
 
 * If nothing happens, it’s probably because you forgot the `show()`.
 
-* If your program won’t run at all – did you forget to close the graph window from the last time it ran?
