@@ -28,7 +28,7 @@ The opposite of *split*. Join takes a container (e.g. a list, normally a list of
 <br />Returns a copy of the string in which all occurrences of the text oldtext are replaced with newtext. 
 
 **split(split_on) return type: list (of strings)**
-Splits a string on the substring split_on into a list of strings. For example, `"goodbye cruel world".split(" ")` returns `["goodbye", "cruel", "world"]`. split_on is normally one a one-character string, but it doesn't have to be. 
+Splits a string on the substring split_on into a list of strings. For example, `"goodbye cruel world".split(" ")` returns `["goodbye", "cruel", "world"]`. split_on is normally done on a one-character string, but it doesn't have to be. 
 
 **strip() return type: str**
 <br />Returns a copy of the string with any whitespace characters (spaces, tabs, newlines) removed from both the start and end
