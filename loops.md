@@ -80,7 +80,7 @@ Your condition doesn’t have to use a counter – it can be any legal condition
 See break and continue below for some ways to do more subtle loop control within a loop.  
 
 Common errors to watch out for with while loops:
-*	Infinite loops. If for instance you use a counter variable and forget to increase it each time, your loop will never finish – the condition will always be false. You can stop an accidental infinite loop using Ctrl-C (in the terminal window), though this stops the entire program. Just occasionally you WANT an infinite loop, so it’s not illegal to make one.
+*	Infinite loops. If for instance you use a counter variable and forget to increase it each time, your loop will never finish – the condition will always be false. You can stop an accidental infinite loop using Ctrl-C (in the console window), though this stops the entire program. Just occasionally you WANT an infinite loop, so it’s not illegal to make one.
 * Forgetting indentation, or inconsistent number of spaces in indentation. You HAVE to indent the statements that you want to happen inside the loop (to the same level).
 
 break and continue
