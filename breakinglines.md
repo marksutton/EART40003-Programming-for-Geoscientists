@@ -11,7 +11,7 @@ You can break lines with \ like so:
 Or inside brackets, or square brackets, you can just put a line break in without worrying, e.g. 
 
 <pre>a = (100 + b
-          * c + 20)
+      * c + 20)
 </pre>
 
 If you do this, stylistically the continuation should line up with the first character under the bracket on the line above.
