@@ -42,3 +42,10 @@ Python provides a flexible and easy-to-use way to extract bits of strings (compa
 <br />`"slicing"[-4:-2]`:	means characters 4th from end to 3rd from end – so “ci”. Yes it DOES mean 3rd from the end - it's up to but not including character -2 from the end.
 <br />`"slicing"[-3:]`	Characters 3rd from end to the end (i.e. last 3 characters) – so “ing”
 
+f Strings
+--------
+
+'f strings' (properly called 'formatted string literals') provide a way to insert values (normally from variables) into a string. This is a very common thing to want to do! Before going into the details of how they work, I should point out that there are at least three other ways to do this, and if you look at code available online you may see these other approaches being used. The 'f string' approach though is the most modern and probably the most convenient, so you should use it in this course.
+<br />
+In their simplest form, you use f strings by just inserting variable names into strings inside braces { }, and prefixing the " at the start of the string with an f. There are some complexities though - these are best explained by examples.
+<br />
