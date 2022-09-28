@@ -52,7 +52,7 @@ In their simplest form, you use f strings by just inserting variable names into 
 <br />
 *In these examples, `my_variable` has the floating point value 4.21, `my_string` is `"hello"`, and `other_variable` has the integer value 8. In each case I give the output or effect in a comment*
 <pre>
-print(f"Result is {my_ variable}")                          # prints "Result is 4.29"
+print(f"Result is {my_variable}")                          # prints "Result is 4.29"
 print(f"{my_string}, the result is {my_variable}")          # prints "hello, the result is 4.29" (you can have multiple variables in braces, and can include strings)
 print(f"Result is {my_variable + 2.1}")                     # prints "hello, the result is 6.49"  (you can do calculations inside the braces!)
 print(f"Found {other_variable} open braces {{")             # prints "Found 8 open braces {"  (to use a { or } in an f string you have to double it)
@@ -61,7 +61,7 @@ print(f"Result to one d.p. is {my_variable:.1f}")           # prints "Result to 
 print(f"Result to four d.ps is {my_variable:.4f}")          # prints "Result to one d.ps is 4.2900" (and again)
 print(f"Result is {other_variable:02}")                     # prints "Result is 08" (02 means use two columns, padding with leading zeros)
 print(f"Result is {other_variable:2}")                      # prints "Result is  8" (2 means use two columns, padding with spaces)
-print(f"Result is {my_variable:03.3f}")                     # prints "Result is 004.290" (you can combine padding with decimal places)
+print(f"Result is {my_variable:07.3f}")                     # prints "Result is 004.290" (you can combine padding with decimal places - but padding counts total characters)
 </pre>
 
 There *is* more to the complex world of string formatting, but the examples above should cover most of what you want to do. See e.g. https://zetcode.com/python/fstring/ for more details if you need them.
