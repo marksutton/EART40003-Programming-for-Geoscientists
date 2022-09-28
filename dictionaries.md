@@ -1,7 +1,7 @@
 Dictionaries
 =============
 
-Dictionaries are another type of container class (= iterables, collections). See definitions section above. A good way to think about them is as look-up tables. 
+Dictionaries are another type of container class (= iterables, collections). See definitions section. A good way to think about them is as look-up tables. 
 Dictionaries don't have indices like lists – instead they have 'keys', which are much more flexible. Dictionaries can be set up in code like lists, 
 except that they use curly brackets { } instead of square brackets [ ]. For example:
  
@@ -22,7 +22,7 @@ It might have made more sense if they used curly brackets, but they didn't. Curl
 Keys can be any type – here they are strings, but they could instead be numbers. They COULD be other types, but that's rarely a good idea. 
 They also don't all have to be the same type in any given dictionary, but (again) that's unlikely to be what you really want. 
 Elements can of course also be any type – that includes other collections like lists and dictionaries. Y
-ou are allowed to have different element types in one dictionary, but (once more) it's probably not a good idea. 
+ou are allowed to have different element types as values in one dictionary, but (once more) it's probably not a good idea. 
 99% of the time you'll want to use dictionaries where all the keys are of one type, either numbers or strings, 
 and all the elements are of one type as well (which could be just about anything).
 
