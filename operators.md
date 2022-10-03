@@ -97,4 +97,4 @@ print(f"Time taken: {seconds_variable} seconds")
 
 You will see more complicated placeholder than %f - these specify things like number of decimal places, and the type of the variable. You can look them up if you need to decypher them!
 
-**NOTE** – because % has a special meaning in strings (see above) – if you want an actual percent symbol, you use %%. This is a common 'gotcha'!
+**NOTE** – because % has a special meaning in strings (see above) – if you want an actual percent symbol, you use %%. Except in f strings, where you just use %. Does that sound like a horrible mess to you? You are not alone!
