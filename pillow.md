@@ -1,5 +1,5 @@
 PIL (Python Image Library) is a module providing image manipulation functionality. It can do all sorts of things, but we 
-will use it in its simplest form – to read an image file into a numpy array so we can manipulate it, then to write that array back
+will use it in its simplest form – to read an image file into a [numpy](numpy.md) array so we can manipulate it, then to write that array back
 out as a file. To use PIL.image, it’s normal to import it as:
 
 <pre>
