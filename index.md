@@ -10,7 +10,7 @@ Use these documents to search for definitions, aspects of python syntax, methods
 
 Functions
 ---------
-* [Python (and imageio) Functions](functions.md)
+* [Python functions](functions.md)
 * [Numpy functions](numpy_functions.md)
 * [Matplotlib functions](matplotlib_functions.md)
 
@@ -44,6 +44,7 @@ Syntax and concepts
 * [Numpy arrays](numpy.md)
 * [Operators](operators.md)
 * [Objects](objects.md)
+* [Pillow image module](pillow.md)
 * [Recursion](recursion.md)
 * [Sets](sets.md)
 * [Strings](strings.md)
