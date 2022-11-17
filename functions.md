@@ -43,12 +43,6 @@ number like 2.5 into an integer. Note that the function rounds DOWN towards zero
 – if you want to round to the nearest integer instead, add 0.5 before using int. 
 If the value cannot be converted (e.g. "4.5" can be converted, "Forty-two" cannot), the int function will throw an error and stop the program.
 
-**imread(filename) return type: array [imageio]**
-<br />Reads an image file into a numpy array. imread knows about a lot of formats, so should work with png, jpg, bmp, tiff and most common image types (but not all – there are a LOT of image formats out there). Just pass it a filename and it will do it’s magic. If the image is a greyscale image, the data will be a 2D array – first dimension is height, second dimension is width. Vertical positions are counted from the top, not the bottom! Each value will be a pixel intensity, 0-255. If the image is a RGB (colour) image, you get an extra dimension of size 3 – these are the red, green and blue levels, using the same 0-255 scale. So imagearray[10, 20, 1] gives you the green value at position 10 pixels from the top, 20 pixels from the left. This is NOT a builtin function - you need to `import imageio`!
- 
-**imwrite(filename, imagearray) return type: N/A [imageio]**
-<br />Writes an image file from the data in imagearray, which must adhere to the format returned by `imread`, i.e. be a two-dimensional array with values 0-255 (which creates a greyscale file), or a three dimensional array in which the third dimension is of size 3 (this is the red. green and blue values). The file format is automatically chosen according to the extension of the filename given. This is NOT a builtin function - you need to import imageio!
-
 **len(str OR container) return type: integer [built-in]**
 Len gives you the lenth of something. If you give it a string as an argument, it returns the number of characters in the string. This is one of the few string functions which is a normal function, rather than a method of str – so use it like `len("hello")` not `"hello".len()`. If you pass it a container (e.g. a list or dictionary or set) it returns the number of elements in the container.
 
