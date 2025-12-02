@@ -11,8 +11,8 @@ you’ll have them as statements on their own, to create/modify/show the current
 --------------------
 
 **bar(left, height, width, bottom, kwargs)**
-<br />**hbar(left, height, width, bottom, kwargs)**
-<br />bar plots a barchart – well a column chart really – vertical bars. hbar is the horizontal bar equivalent – 
+<br />**barh(left, height, width, bottom, kwargs)**
+<br />bar plots a barchart – well a column chart really – vertical bars. barh is the horizontal bar equivalent – 
 it works in exactly the same way. If you want to label the bars with text (and you probably do), use the `xticks` function.
 <br />`left` is a list of values for the left of bars, i.e. their positions. Often you’ll just want whole numbers, so `[1, 2, … 10]` etc.
 <br />`height` is a list of height values for the bars – i.e. the actual data.
