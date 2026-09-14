@@ -299,7 +299,7 @@ Now think about what happens when it’s called on species 6. Species 6 has two 
 Now, finally, let’s look at what happens if you call the function on species 1. This will have many more levels of recursion, so I’ll write it out with each level of recursion as a column in a table. Note that in this table I’ve used **d_count** for **descendant_count** for space reasons.
 
 ::: recursion-trace
-![Trace of the recursive calls used to count descendant species.](assets/session-07/recursion-trace.png)
+![](assets/session-07/recursion-trace.png)
 :::
 
 … and the result (7) is correct – 5 from the branch starting with #2, plus the two daughterless species #3 and #4. The function has recursed over the entire tree, and added all the species together. Notice that the concept of local variables is vital to how this works – the ‘descendant_count’ used by each ‘instance’ of the function is separate, so the first ‘level’ of iteration is keeping its own copy of ‘descendant_count’ intact as all the other ‘deeper’ recursions are creating and using theirs. Remember how I said weeks ago that local variables were important for implementing programming tricks? This is what I was talking about.
