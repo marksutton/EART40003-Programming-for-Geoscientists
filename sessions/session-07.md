@@ -299,8 +299,7 @@ Now think about what happens when it’s called on species 6. Species 6 has two 
 Now, finally, let’s look at what happens if you call the function on species 1. This will have many more levels of recursion, so I’ll write it out with each level of recursion as a column in a table. Note that in this table I’ve used **d_count** for **descendant_count** for space reasons.
 
 ::: recursion-trace
-| Called on species 1.<br>d_count = 3<br>Add count of #2 … =><br>… got 4 (d_count =7)<br>Add count of #3 … =><br>… got 0 (d_count =7)<br>Add count of #4 … =><br>… got 0 (d_count =7)<br>Return d_count of 7 | Called on species 2.<br>d_count = 1<br>Add count of #5 … =><br>… got 3 (d_count =4)<br>Return d_count of 4<br>Called on species 3.<br>No daughters, return 0<br>Called on species 4.<br>No daughters, return 0 | Called on species 5.<br>d_count = 1<br>Add count of #6 … =><br>… got 2 (d_count =3)<br>Return d_count of 3 | Called on species 6.<br>d_count = 2<br>Add count of #7 … =><br>… got 0 (d_count =2)<br>Add count of #8 … =><br>… got 0 (d_count =2)<br>Return d_count of 2 | Called on species 7.<br>No daughters, return 0<br>Called on species 8.<br>No daughters, return 0 |
-| --- | --- | --- | --- | --- |
+![Trace of the recursive calls used to count descendant species.](assets/session-07/recursion-trace.png)
 :::
 
 … and the result (7) is correct – 5 from the branch starting with #2, plus the two daughterless species #3 and #4. The function has recursed over the entire tree, and added all the species together. Notice that the concept of local variables is vital to how this works – the ‘descendant_count’ used by each ‘instance’ of the function is separate, so the first ‘level’ of iteration is keeping its own copy of ‘descendant_count’ intact as all the other ‘deeper’ recursions are creating and using theirs. Remember how I said weeks ago that local variables were important for implementing programming tricks? This is what I was talking about.

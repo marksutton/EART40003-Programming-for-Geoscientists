@@ -171,14 +171,17 @@ th, td {
   text-align: left;
 }
 th { font-weight: 700; background: #f1f1f1; }
-.recursion-trace table {
-  font-size: 6.8pt;
-  line-height: 1.15;
+.recursion-trace {
+  break-before: page;
+  break-inside: avoid;
+  text-align: center;
 }
-.recursion-trace th,
-.recursion-trace td {
-  padding: 0.8mm 1mm;
-  white-space: nowrap;
+.recursion-trace figure { margin: 0; }
+.recursion-trace img {
+  display: block;
+  width: auto;
+  max-height: 225mm;
+  margin: 0 auto;
 }
 .section-exercises table th:nth-child(2),
 .section-exercises table th:nth-child(4),
