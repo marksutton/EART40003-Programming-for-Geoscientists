@@ -45,9 +45,11 @@ print(f"Result is {my_variable + 2.1}")
 
 *Prints Result is 6.39 (you can do calculations inside the braces!)*
 
+{% raw %}
 ```python
 print(f"Found {other_variable} open braces {{")
 ```
+{% endraw %}
 
 *Prints Found 8 open braces { (to use a { or } in an f string you have to double it)*
 

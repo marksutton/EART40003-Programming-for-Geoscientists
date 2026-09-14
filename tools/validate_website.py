@@ -76,7 +76,21 @@ def validate_page(path: Path) -> CheckResult:
     lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
     errors: list[str] = []
     warnings: list[str] = []
+    liquid_raw = False
     for number, line in enumerate(lines, start=1):
+        stripped = line.strip()
+        if stripped == "{% raw %}":
+            if liquid_raw:
+                errors.append(f"line {number}: nested Liquid raw wrapper")
+            liquid_raw = True
+            continue
+        if stripped == "{% endraw %}":
+            if not liquid_raw:
+                errors.append(f"line {number}: Liquid endraw has no matching raw wrapper")
+            liquid_raw = False
+            continue
+        if "{{" in line and not liquid_raw:
+            errors.append(f"line {number}: Jekyll Liquid delimiter must be inside a raw wrapper")
         if "handout-only:" in line:
             errors.append(f"line {number}: handout-only wrapper leaked into docs")
         for match in LINK.finditer(line):
@@ -87,6 +101,8 @@ def validate_page(path: Path) -> CheckResult:
             target = local_target(match.group(1))
             if target and not (path.parent / target).resolve().is_file():
                 errors.append(f"line {number}: local image not found: {target}")
+    if liquid_raw:
+        errors.append("end of file: unclosed Liquid raw wrapper")
     page_headings = headings(lines)
     if not page_headings:
         warnings.append("no Markdown heading found")
