@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$title$</title>
+$for(css)$
+<link rel="stylesheet" href="$css$">
+$endfor$
+</head>
+<body>
+<div class="running header-left">$course$ $course_title$</div>
+<div class="running header-centre">$header_title$</div>
+<div class="running header-right">$author_short$ $year$</div>
+<main>
+<header id="title-block-header">
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<div class="subtitle">$subtitle$</div>
+$endif$
+</header>
+$if(handout_intro)$
+<div class="handout-intro">
+$handout_intro$
+</div>
+$endif$
+$if(toc)$
+<nav id="TOC" role="doc-toc">
+<h1 class="toc-title">Table of contents</h1>
+$table-of-contents$
+</nav>
+$endif$
+$body$
+</main>
+</body>
+</html>

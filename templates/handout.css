@@ -1,0 +1,187 @@
+@page {
+  size: A4;
+  margin: 21mm 18mm 19mm 18mm;
+  @top-left { content: element(header-left); }
+  @top-center { content: element(header-centre); }
+  @top-right { content: element(header-right); }
+  @bottom-center { content: counter(page); font-size: 8.5pt; }
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.4pt;
+  line-height: 1.38;
+  color: #111;
+}
+body { margin: 0; counter-reset: major; }
+main { width: 100%; }
+
+.running { font-size: 8.3pt; color: #111; }
+.header-left { position: running(header-left); }
+.header-centre { position: running(header-centre); }
+.header-right { position: running(header-right); }
+
+#title-block-header { margin: 3mm 0 6mm 0; text-align: center; }
+h1.title {
+  margin: 0;
+  color: #5589c5;
+  font-size: 24pt;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.4pt;
+}
+.subtitle {
+  margin-top: 2.5mm;
+  font-size: 8.8pt;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.45pt;
+}
+
+#TOC { margin: 0 0 8mm 0; page-break-inside: avoid; }
+#TOC h1.toc-title {
+  margin: 0 0 3mm 0;
+  padding: 2mm 2.2mm;
+  background: #5589c5;
+  color: white;
+  font-size: 10.7pt;
+  text-transform: uppercase;
+  letter-spacing: 1.1pt;
+}
+#TOC ul { list-style: none; padding-left: 0; margin: 0; }
+#TOC ul ul { padding-left: 0; }
+#TOC li { margin: 1.6mm 0; font-weight: 700; font-style: italic; }
+#TOC li li { margin-left: 0; font-weight: 700; }
+#TOC a { color: #111; text-decoration: none; }
+#TOC a::after { content: leader(".") target-counter(attr(href), page); }
+
+.major-section > h1 {
+  counter-increment: major;
+  margin: 7mm 0 4mm 0;
+  padding: 2mm 2.2mm;
+  background: #5589c5;
+  color: white;
+  font-size: 10.7pt;
+  text-transform: uppercase;
+  letter-spacing: 1.1pt;
+  break-after: avoid;
+}
+.major-section > h1::before { content: counter(major) ". "; }
+
+h2 {
+  margin: 6mm 0 3mm 0;
+  padding: 2mm 2.2mm;
+  background: #dce8f5;
+  color: #111;
+  font-size: 10.6pt;
+  text-transform: uppercase;
+  letter-spacing: 0.7pt;
+  break-after: avoid;
+}
+h3 {
+  margin: 4.2mm 0 1.5mm 0;
+  font-size: 10.4pt;
+  font-weight: 700;
+  break-after: avoid;
+}
+h4 {
+  margin: 3.2mm 0 1.2mm 0;
+  font-size: 10.4pt;
+  font-weight: 700;
+  break-after: avoid;
+}
+
+p { margin: 0 0 3.2mm 0; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+a { color: #0645d8; text-decoration: underline; }
+
+code { font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 0.92em; }
+pre {
+  margin: 2.2mm 0 4mm 0;
+  padding: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.38;
+  break-inside: avoid;
+  break-after: avoid;
+  background: transparent;
+  border: 0;
+}
+pre code { font-size: 9.3pt; font-weight: 600; }
+
+/* Schematic syntax is explanatory prose, even when Markdown indentation makes a pre. */
+.syntax-template {
+  margin: 2.2mm 0 4mm 0;
+  break-inside: avoid;
+}
+.syntax-template p { margin-bottom: 1.2mm; }
+.syntax-template pre,
+.syntax-template code {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.4pt;
+  font-weight: 400;
+  line-height: 1.38;
+  white-space: pre-wrap;
+}
+.syntax-template pre { margin: 0 0 1.2mm 0; }
+
+blockquote {
+  margin: 3mm 0 4mm 0;
+  padding: 2.4mm 3.2mm;
+  border-left: 3px solid #5589c5;
+  background: #f2f6fb;
+  break-inside: avoid;
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+ul, ol { margin-top: 1.5mm; margin-bottom: 3.5mm; }
+li { margin-bottom: 1mm; }
+
+.section-definitions h3 {
+  display: inline;
+  margin: 0;
+  font-size: 10.4pt;
+}
+.section-definitions h3::after { content: ": "; }
+.section-definitions h3 + p { display: inline; }
+.section-definitions h3 + p::after {
+  content: "";
+  display: block;
+  margin-bottom: 3.2mm;
+}
+.section-functions h3,
+.section-methods h3 { margin-top: 6mm; }
+.section-functions h3 + p,
+.section-methods h3 + p { margin-top: 0; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 3mm 0 4.5mm 0;
+  font-size: 9.2pt;
+  line-height: 1.3;
+  break-inside: avoid;
+}
+th, td {
+  border: 0.6pt solid #999;
+  padding: 2mm 2.2mm;
+  vertical-align: middle;
+  text-align: left;
+}
+th { font-weight: 700; background: #f1f1f1; }
+.section-exercises table th:nth-child(2),
+.section-exercises table th:nth-child(4),
+.section-exercises table td:nth-child(2),
+.section-exercises table td:nth-child(4) {
+  width: 15%;
+  text-align: center;
+}
+.section-exercises table th:nth-child(1),
+.section-exercises table th:nth-child(3),
+.section-exercises table td:nth-child(1),
+.section-exercises table td:nth-child(3) { width: 35%; }
+
+.section-exercises { break-before: page; }
+
+@media print { a { color: #0645d8; } }
