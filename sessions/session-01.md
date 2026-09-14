@@ -86,13 +86,14 @@ A variable is best thought of as a box in the computer's memory which can store 
 
 These are given as:
 
-```text
-function_name(arguments) return type: return_type [origin]
-```
+`function_name(arguments)`
+
+**Returns:** return type  
+**Origin:** origin
 
 `arguments` is the list of arguments the function expects - the text will tell you what they do. I haven't always documented all arguments.
 
-`return_type` is the type of value the function returns - in many cases this is a string or a number. Some functions do not return any value - these are given as `return type: N/A`.
+`Returns` describes the type of value the function returns - in many cases this is a string or a number. Some functions do not return any value - these are given as **Returns:** N/A.
 
 `origin` (my term, not a standard one) is where the function comes from! Some are built-in - others are from a particular library that you will need to import.
 
