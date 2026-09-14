@@ -437,7 +437,7 @@ What will each of these programs do? The file ‘test.csv’ contains the follow
 
 **15,100,12,7,101,49,38,12**
 
-1. (Don’t list every value, just summarise what it does)
+**1.** (Don’t list every value, just summarise what it does)
 
 ```python
 testfile = open("test.csv", "r")
@@ -457,7 +457,7 @@ testfile.close()
 
 **………………………………………………………………………………………………………………………………………………………**
 
-2. What actual value will this print?
+**2.** What actual value will this print?
 
 ```python
 testfile = open("test.csv","r")
@@ -473,7 +473,7 @@ print(d[15])
 
 Prints: …………………………………………………………………………………………………
 
-3. Again – what actual value will this print?
+**3.** Again – what actual value will this print?
 
 ```python
 testfile = open("test.csv","r")
