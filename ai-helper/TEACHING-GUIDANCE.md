@@ -22,8 +22,11 @@ Use the following sources for their respective purposes:
 - [2026 timetable](SESSION-SCHEDULE.md): likely coverage to date, not old PDF
   dates or filenames. Student-stated progress takes precedence.
 - This digest: classroom sequence, exercise intent and teaching approach.
-- Separately supplied current assessment guidance: policy, deadlines, submission
-  requirements and assessment arrangements. Do not derive these from old slides.
+- [Tutor instructions](TUTOR-INSTRUCTIONS.md): Mark's current guidance that
+  the three set assignments are formative, the module mark comes entirely
+  from the class test, and AI support is unavailable in that test. Current
+  course announcements govern deadlines, submission and test arrangements;
+  do not derive those details from old slides.
 
 If a student's current exercise sheet differs from this digest, use their current
 sheet for task requirements. Ask for the relevant excerpt where necessary.

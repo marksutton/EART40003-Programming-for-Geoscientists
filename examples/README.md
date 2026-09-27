@@ -47,5 +47,6 @@ recommended working code. The large NumPy timing demonstration allocates
 The current examples are an intake collection, not yet a published AI tutor
 package. Environment guidance is recorded in
 [the course environment briefing](../ai-helper/COURSE-AI-ENVIRONMENT.md).
-Assessment and permitted AI use are covered separately and must not be
-inferred from these examples.
+The [tutor instructions](../ai-helper/TUTOR-INSTRUCTIONS.md) record Mark's
+current guidance on formative assignments, learning with AI, and the class
+test. Do not infer dates or assessment arrangements from these old examples.
