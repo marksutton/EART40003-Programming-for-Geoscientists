@@ -78,15 +78,28 @@ def navigation(title: str, paths: list[Path]) -> bytes:
 def demo_navigation() -> bytes:
     lines = ["# Demonstration programs", "",
              "These are samples of Mark's code from last year's teaching.",
-             "Some require data files; read the [demo notes](README.md) before using them.",
              "", "Return to the [AI tutor start page](../index.md).", ""]
+    notes = (ROOT / "examples" / "README.md").read_text(encoding="utf-8")
+    if not notes.startswith("# Course demonstrations\n"):
+        raise ValueError("unexpected demonstration notes heading")
+    lines += ["## Notes for the tutor", "", notes.partition("\n")[2].strip(), ""]
     for number in range(1, 9):
         lines += [f"## Session {number}", ""]
         for path in DEMO_FILES:
             if path.name.startswith(f"demo_{number}_"):
-                lines.append(f"- [{path.name}]({path.name})")
+                lines.append(f"- [{path.name}]({path.stem}.md)")
         lines.append("")
     return "\n".join(lines).encode("utf-8")
+
+
+def web_demo(source: Path) -> bytes:
+    code = source.read_text(encoding="utf-8")
+    if "````" in code or "{% endraw %}" in code:
+        raise ValueError(f"cannot safely render demonstration: {source}")
+    body = (f"# {source.name}\n\n"
+            "Return to [Demonstration programs](index.md).\n\n"
+            "````python\n" + code.rstrip("\n") + "\n````\n")
+    return ("---\n---\n{% raw %}\n" + body + "{% endraw %}\n").encode("utf-8")
 
 
 def content_map() -> dict[str, bytes]:
@@ -111,6 +124,7 @@ def content_map() -> dict[str, bytes]:
     content["examples/index.md"] = demo_navigation()
     for source in DEMO_FILES:
         content[f"examples/{source.name}"] = source.read_bytes()
+        content[f"examples/{source.stem}.md"] = web_demo(source)
     return content
 
 
@@ -118,7 +132,7 @@ def zip_bytes(content: dict[str, bytes]) -> bytes:
     stream = io.BytesIO()
     with zipfile.ZipFile(stream, "w", compression=zipfile.ZIP_DEFLATED) as archive:
         for name, data in sorted(content.items()):
-            if name.startswith("sessions/") and name.endswith(".md") and name != "sessions/index.md":
+            if data.startswith(b"---\n---\n{% raw %}\n"):
                 data = data.removeprefix(b"---\n---\n{% raw %}\n").removesuffix(b"{% endraw %}\n")
             info = zipfile.ZipInfo(name, ZIP_TIME)
             info.compress_type = zipfile.ZIP_DEFLATED
