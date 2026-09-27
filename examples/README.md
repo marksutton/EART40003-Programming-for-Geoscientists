@@ -25,10 +25,11 @@ by `demo_6_test1.py`, so it is not a missing input.
 
 ## Requirements for the forthcoming AI tutor package
 
-Use the current date and the organiser's session schedule as a guide to what
-has probably been covered. Session dates have not yet been supplied: do not
-infer them from filenames, file timestamps, or last year's calendar. Use the
-course's Europe/London timezone when interpreting scheduled dates.
+Use the current date and the organiser's
+[2026 session schedule](../ai-helper/SESSION-SCHEDULE.md) as a guide to what
+has probably been covered. Do not infer dates from filenames, file timestamps,
+or last year's calendar. Use the course's Europe/London timezone when
+interpreting scheduled dates.
 
 Scheduled coverage is a default estimate, not proof that a student has
 completed a session. A student's stated progress and explicit updates from
@@ -46,5 +47,5 @@ recommended working code. The large NumPy timing demonstration allocates
 The current examples are an intake collection, not yet a published AI tutor
 package. Environment guidance is recorded in
 [the course environment briefing](../ai-helper/COURSE-AI-ENVIRONMENT.md).
-Session dates remain to be supplied; assessment and permitted AI use are
-covered separately and must not be inferred from these examples.
+Assessment and permitted AI use are covered separately and must not be
+inferred from these examples.
