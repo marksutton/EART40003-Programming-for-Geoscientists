@@ -41,11 +41,10 @@ The import keyword is used to import items (functions, classes, constants) from 
 
 To provide flexibility (or to add confusion?) you can use import in several different ways. The simplest is:
 
-::: syntax-template
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0">import module [as alias] # the ‘as alias’ is optional</p>
+</div>
 
-import module [as alias]     # the 'as alias' is optional
-
-:::
 
 For instance:
 
@@ -87,13 +86,11 @@ from math import *
 
 Python functions look like:
 
-::: syntax-template
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0">def function_name(argument_list):</p>
+<p style="margin:0">    [indented statements forming the body of the function]</p>
+</div>
 
-def function_name(argument_list):
-
-    [indented statements forming the body of the function]
-
-:::
 
 *function_name* has the same restrictions as variable names do. Function names, like variable names, should describe what they do. *argument_list* is the list of arguments, separated by commas. The name you use for the argument will become a local variable within the function, holding whatever the value is passed to the function.
 

@@ -40,27 +40,24 @@ Takes a value and tries to convert it into an integer (i.e. a whole number). Nor
 
 In Python, these three keywords provide all conditional program flow functionality. They are used together, in an *if block*. An *if block* begins with an `if` statement, followed by indented lines of code to be executed if the condition is True. Optionally, it can also have one or more `elif` statements (`elif` is short for *else if*, though if you type *else if* Python won't understand it) plus associated indented lines of code. These are used to catch alternative conditions, Finally, optionally again, you can have one `else` statement and associated code, to catch any cases not caught already. Crucially, at most only ONE block of indented code is executed each time the program runs through an entire if/elif/else block. *See below for more on conditions*.
 
-::: syntax-template
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0"><strong>if <em>condition1</em>:</strong></p>
+<p style="margin:0">    Code to execute if condition1 was True (can be as many lines as
+needed)</p>
+<p style="margin:0"><strong>elif <em>condition2</em>:</strong> [elif blocks are
+optional]</p>
+<p style="margin:0">    Code to execute if condition2 was True and condition1 was false
+(can be as many lines as needed)</p>
+<p style="margin:0"><strong>elif <em>condition3</em>:</strong> [elif blocks are
+optional]</p>
+<p style="margin:0">    Code to execute if condition3 was True and both condition1 and
+condition 2 were false</p>
+<p style="margin:0">… [as many elif blocks as you like]</p>
+<p style="margin:0"><strong>else:</strong> [else block is optional]</p>
+<p style="margin:0">    Code to execute if none of the if or elif conditions were
+True</p>
+</div>
 
-**if *condition1*:**
-
-    Code to execute if condition1 was True (can be as many lines as needed)
-
-**elif *condition2*:**  [elif blocks are optional]
-
-    Code to execute if condition2 was True and condition1 was false (can be as many lines as needed)
-
-**elif *condition3*:**  [elif blocks are optional]
-
-    Code to execute if condition3 was True and both condition1 and condition 2 were false
-
-... [as many elif blocks as you like]
-
-**else:**  [else block is optional]
-
-    Code to execute if none of the if or elif conditions were True
-
-:::
 
 ### Common errors
 
@@ -102,13 +99,12 @@ else:
 
 Loops - code blocks executed repeatedly - are fundamental to most non-trivial programs. Python has two types of loops - `while` loops, and `for` loops (we will cover `for` loops later). `while` loops are very simple in concept, and are general-purpose loops. They begin with a `while` statement that contains a condition, which is followed by one or more lines of code to be executed repeatedly, as long as the condition continues to be true. This code has to be indented to tell Python which lines are within the while block.
 
-::: syntax-template
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0"><strong>while <em>condition</em>:</strong></p>
+<p style="margin:0">    Code to execute as long as condition is True (can be as many
+lines as needed)</p>
+</div>
 
-**while *condition*:**
-
-    Code to execute as long as condition is True (can be as many lines as needed)
-
-:::
 
 E.g. this loop uses a counter variable to go round 5 times, printing out the numbers 1 to 5:
 
@@ -174,13 +170,11 @@ Conditions are expressions that Python can evaluate to 'True' or 'False', and ar
 
 Simplest type of condition: just a True or False value. Note True and False have an initial capital letter in Python. These aren't very practical, though occasionally a while loop that never ends because of the condition is useful (as you can also exit it with a `break` statement if you need to).
 
-::: syntax-template
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0"><strong>while True:</strong></p>
+<p style="margin:0">    [Code to keep looping over forever]</p>
+</div>
 
-**while True:**
-
-    [Code to keep looping over forever]
-
-:::
 
 ### 2. Comparison operators
 

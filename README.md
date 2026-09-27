@@ -24,3 +24,4 @@ canonical sessions, their images, and the demonstration programs. Run
 `python tools/build_ai_tutor.py --check` to confirm the tracked site files and
 ZIP match the sources. The cumulative reference pages in `docs/` follow the
 separate integration workflow above.
+Pandoc is used to render schematic syntax blocks in the tutor web copies.

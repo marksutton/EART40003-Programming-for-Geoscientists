@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import io
 import re
+import subprocess
 import sys
 import zipfile
 from pathlib import Path
@@ -17,8 +18,29 @@ OUTPUT = ROOT / "docs" / "ai"
 ARCHIVE = OUTPUT / "eart40003-ai-tutor.zip"
 ZIP_TIME = (2026, 1, 1, 0, 0, 0)
 LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+DIV = re.compile(r"^::: (syntax-template|recursion-trace)\s*\n(.*?)^:::\s*$", re.MULTILINE | re.DOTALL)
 SESSION_FILES = sorted((ROOT / "sessions").glob("session-*.md"))
 DEMO_FILES = sorted((ROOT / "examples").glob("*.py"))
+
+
+def render_div(match: re.Match[str]) -> str:
+    kind, body = match.groups()
+    if kind == "recursion-trace":
+        return body.strip("\n") + "\n\n"
+    prepared: list[str] = []
+    for line in body.strip("\n").splitlines():
+        indent = len(line) - len(line.lstrip(" "))
+        prepared.append("&nbsp;" * indent + line[indent:])
+    result = subprocess.run(
+        ["pandoc", "--from=markdown+hard_line_breaks", "--to=html"],
+        input="\n".join(prepared) + "\n", text=True,
+        capture_output=True, check=True, encoding="utf-8",
+    )
+    html = result.stdout.strip().replace("<p>", '<p style="margin:0">')
+    return ("<div class=\"syntax-template\" style=\"font-family:inherit; "
+            "background:#f4f7fa; border-left:3px solid #5483bc; "
+            "padding:0.5em 0.8em; margin:0.8em 0\">\n"
+            + html + "\n</div>\n\n")
 
 
 def web_session(source: Path) -> bytes:
@@ -36,6 +58,9 @@ def web_session(source: Path) -> bytes:
         raise ValueError(f"{source}: {'; '.join(errors)}")
     number = int(source.stem.split("-")[1])
     body = f"# Session {number} reference\n\n" + "".join(selected).lstrip()
+    body = DIV.sub(render_div, body)
+    if "::: syntax-template" in body or "::: recursion-trace" in body:
+        raise ValueError(f"unconverted fenced div in {source}")
     # Liquid raw guards literal {{ in Python examples. Jekyll removes the
     # markers before rendering Markdown. The ZIP gets marker-free Markdown.
     return ("---\n---\n{% raw %}\n" + body.rstrip() + "\n{% endraw %}\n").encode("utf-8")

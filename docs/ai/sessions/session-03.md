@@ -182,31 +182,20 @@ Python provides a flexible and easy-to-use way to extract bits of strings (compa
 
 Exceptions are run-time errors like divide by zero, failed conversions from strings to numbers, etc. You don’t want these appearing when a program runs if you can avoid it. You can either write code that checks for problems before it does the step that throws the error (e.g. check that a string only includes digits before trying to convert it), or you can let the exception occur and *catch* it – write code that intercepts it and does something more elegant than crashing. The syntax is:
 
-::: syntax-template
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0">try:</p>
+<p style="margin:0">    [lines to execute]</p>
+<p style="margin:0">except ExceptionName1:</p>
+<p style="margin:0">    [lines to execute if ExceptionName1 happened]</p>
+<p style="margin:0">except ExceptionName2:</p>
+<p style="margin:0">    [lines to execute if ExceptionName2 happened]</p>
+<p style="margin:0">…</p>
+<p style="margin:0">except Exception:</p>
+<p style="margin:0">    [lines to execute if there was an exception not caught above]</p>
+<p style="margin:0">else:</p>
+<p style="margin:0">    [lines to execute if there was no exception at all]</p>
+</div>
 
-try:
-
-    [lines to execute]
-
-except ExceptionName1:
-
-    [lines to execute if ExceptionName1 happened]
-
-except ExceptionName2:
-
-    [lines to execute if ExceptionName2 happened]
-
-…
-
-except Exception:
-
-    [lines to execute if there was an exception not caught above]
-
-else:
-
-    [lines to execute if there was no exception at all]
-
-:::
 
 ‘else’ is optional, and multiple except blocks are also optional – but if you have a ‘try’ you have to have at least one ‘except’.
 

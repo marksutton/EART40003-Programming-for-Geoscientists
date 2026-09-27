@@ -256,11 +256,10 @@ List comprehensions are another part of list syntax – these are deliberately s
 
 A nice simple feature! You can use the keyword *in* to find out whether an element is in a list (or in any type of container class). The condition:
 
-::: syntax-template
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0"><em>check_element</em> <strong>in</strong> <em>container</em></p>
+</div>
 
-*check_element* **in** *container*
-
-:::
 
 is True if there is one or more element in *container* matching the *check_element*. e.g.
 
@@ -273,13 +272,11 @@ if "one" in number_list:
 
 One of the more refreshingly simple things about Python is that it only has two types of loops (some languages have a whole profusion of them). We have already seen *while* loops - *for* loops are the other Python loop-type. *for* loops are used for iterating (looping) over 'iterables' – which are containers with multiple values, like lists. As such they are a little more specialised than the general-purpose *while* loops, but are nonetheless even more commonly used. Their syntax is:
 
-::: syntax-template
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0">for item in iterable:</p>
+<p style="margin:0">    [one or more lines to execute each time round loop]</p>
+</div>
 
-for item in iterable:
-
-    [one or more lines to execute each time round loop]
-
-:::
 
 This will loop round as many times as there are elements in the *iterable* container object (which is often going to be a list). The first time round the loop, the variable *item* will have the value of the first element. The second time, it will have the value of the second element… etc. For example…
 
@@ -293,26 +290,22 @@ for number in my_list:
 
 The range function (see above) is used to make sequences of integers, and returns something that's 'almost but not quite a list'. See above for details. This slightly odd 'list-like thing' that it returns is an iterable, i.e. you can use *for* loops on it – in fact getting used in *for* loops is the most important purpose of the *range* function. So…
 
-::: syntax-template
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0">for number in range(10): # loop 10 times, number set to values 0, 1…
+9</p>
+<p style="margin:0">    [do stuff]</p>
+</div>
 
-for number in range(10):   # loop 10 times, number set to values 0, 1… 9
-
-    [do stuff]
-
-:::
 
 Does the same as the code below, but is much more concise
 
-::: syntax-template
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0">number = 0<br />
+while number&lt;10:</p>
+<p style="margin:0">    [do stuff]</p>
+<p style="margin:0">    number += 1</p>
+</div>
 
-number = 0
-while number<10:
-
-    [do stuff]
-
-    number += 1
-
-:::
 
 ### Common errors
 
@@ -332,11 +325,10 @@ There are also comprehensions for other container types – we'll deal with thes
 
 The formal syntax for a list comprehension looks like:
 
-::: syntax-template
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0">[expression for item in iterable if condition]</p>
+</div>
 
-[expression for item in iterable if condition]
-
-:::
 
 This generates a list from *iterable*, where each element is equal to *expression* (which can refer to *item*, and usually does). *Iterable* will normally be an existing list, or a range function. The 'if' bit at the end is optional, and is used as a filter – the condition here can also refer to *item*, and typically will. That may make little sense – we need an example.
 
