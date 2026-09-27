@@ -133,7 +133,9 @@ def main() -> int:
     if not index.is_file():
         print(f"ERROR: missing site navigation page: {index}")
         return 1
-    pages = sorted(docs.rglob("*.md"))
+    # docs/ai is a separate full-course tutor resource, not a cumulative
+    # concept integration. Its links and sources are checked by build_ai_tutor.
+    pages = sorted(page for page in docs.rglob("*.md") if page.relative_to(docs).parts[0] != "ai")
     if not pages:
         print(f"ERROR: no Markdown pages found under {docs}")
         return 1
