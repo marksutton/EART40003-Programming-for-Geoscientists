@@ -9,7 +9,11 @@ Current canonical reference material is in `sessions/`; where older demo
 comments conflict with the revised references, use the current references and
 flag the discrepancy rather than silently modifying a demonstration.
 
-## Supporting data still required
+## Supporting data
+
+These programs are samples of the lecturer's coding style and classroom
+examples, not a self-contained runnable bundle. Their CSV inputs are not
+required for that purpose and need not be supplied for the tutor package.
 
 - `grades.csv` — `demo_6_files.py` and `demo_6_files2.py`
 - `id_to_names.csv` — `demo_6_files2.py`
@@ -40,5 +44,7 @@ recommended working code. The large NumPy timing demonstration allocates
 50 million elements and should be identified as a resource-intensive demo.
 
 The current examples are an intake collection, not yet a published AI tutor
-package. Assessment policy, environment guidance, and release dates remain
-to be supplied.
+package. Environment guidance is recorded in
+[the course environment briefing](../ai-helper/COURSE-AI-ENVIRONMENT.md).
+Session dates remain to be supplied; assessment and permitted AI use are
+covered separately and must not be inferred from these examples.
