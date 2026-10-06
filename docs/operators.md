@@ -86,4 +86,8 @@ a = b % c          # calculate the remainder from dividing b by c, assign it to 
                    # this assumes b and c are both numbers
 ```
 
+## Comparison and Boolean operators
+
+For comparison operators (`>`, `<`, `>=`, `<=`, `==`, `!=`) and Boolean operators (`and`, `or`, `not`), see [Conditions](conditions.md).
+
 [Return to the site index](index.md)

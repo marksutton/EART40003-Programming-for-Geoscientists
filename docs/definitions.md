@@ -4,9 +4,25 @@
 
 See Function.
 
+## Boolean
+
+A Boolean value (named after the mathematician George Boole) is one that can only have one of two values, normally expressed as True or False.
+
+## Breakpoint
+
+See [*Debugger*](#debugger). A point set in a program to force the debugger to stop running at full speed and enter line-at-a-time mode.
+
 ## Comment
 
 Text inserted into a program for the sole-purpose of human-readability. Comments have no effect on the actual running of the program, but are an essential part of programming nonetheless. Turning statements into comments is also a convenient way to temporarily remove a line from your program, without permanently deleting it.
+
+## Condition
+
+Something that a programming language can evaluate to a [*Boolean*](#boolean) value (a True or False), and hence use as the basis of a decision that affects program flow.
+
+## Debugger
+
+A debugger (properly symbolic debugger) is a piece of software that enables a programmer to step through a program line-at-a-time, watching variable values, and following exactly what their program is doing. This is not the only way to debug a program, but is often the easiest way. Debuggers can either be set to step through programs when the user presses a key, or to run the program as normal (full-speed mode) until it reaches a predefined point (a *breakpoint*).
 
 ## Function
 
@@ -31,6 +47,10 @@ Automatic checking of code for "style issues" or errors, underlining them in red
 ## Module
 
 A pre-written set of functions for some particular purpose or set of purposes that you can bring into your program (import). There are many modules for Python already installed on your computer.
+
+## Nesting
+
+Putting a program structure inside another program structure. Pretty well anything can be nested in programming, including function calls, if statements, loops etc. Nesting takes two forms in Python. Nesting within expressions - e.g. `float(input("hello"))` - consists of brackets within brackets (innermost always happens first). Nesting of control structures (`if`, `while` etc.) is done using indentation. Most languages encourage this indentation for readability, but in Python it is mandatory.
 
 ## Pass
 

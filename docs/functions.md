@@ -34,4 +34,11 @@ Provides a simple way to get values from a user while the program is running. `i
 
 Takes a value and tries to convert it into a number (technically a floating point number - discussed in a later lecture). Normally used to convert a string (e.g. from an `input` function) into a number for calculation. If the value cannot be converted (e.g. `"4.5"` can be converted, `"Forty-two"` cannot), the `float` function will throw an error and stop the program.
 
+## `int(value)`
+
+**Returns:** integer<br>
+**Origin:** built-in
+
+Takes a value and tries to convert it into an integer (i.e. a whole number). Normally used to convert a string containing an integer (e.g. from an `input` function) into a number for calculation, but it can also convert a floating-point number such as `2.5` into an integer. When converting a floating-point number, `int` **truncates towards zero**: for example, `int(3.9)` gives `3`, while `int(-5.8)` gives `-5`. This is not the same as rounding to the nearest integer; use `round()` if that is what you need. If a value cannot be converted, `int` throws an error and stops the program. For example, the string `"4"` can be converted, but `"4.5"` and `"Forty-two"` cannot.
+
 [Return to the site index](index.md)

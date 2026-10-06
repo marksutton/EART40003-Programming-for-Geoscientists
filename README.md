@@ -10,7 +10,7 @@ The canonical handouts are not transformed automatically into the website.
 
 ## Cumulative website integration
 
-The website under `docs/` is a cumulative concept-based reference, not a sequence of weekly handouts. It currently contains only the material integrated from Session 1. The previous whole-course site is preserved under `legacy-site/` and is not published.
+The website under `docs/` is a cumulative concept-based reference, not a sequence of weekly handouts. It currently contains material integrated from Sessions 1 and 2. The previous whole-course site is preserved under `legacy-site/` and is not published.
 
 See [INTEGRATION.md](INTEGRATION.md) for the editorial contract and review workflow. Use `python tools/session_inventory.py sessions/session-01.md` to inspect the web-eligible content of one canonical session, and `python tools/validate_website.py` after website edits.
 
