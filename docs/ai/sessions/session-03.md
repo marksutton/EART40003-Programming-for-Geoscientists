@@ -150,6 +150,44 @@ Returns a copy of the string with all characters converted to uppercase.
 
 # Topics
 
+## Breaking up long lines
+
+Sometimes your lines will get too long (the linter will complain, and it IS best to avoid them). You can break lines with \ like so:
+
+```python
+variable_with_a_possibly_over_verbose_name =\
+      not_quite_so_verbose_variable_name * 2
+```
+
+Or inside brackets, or square brackets, you can just put a line break in without worrying, e.g.
+
+```python
+result = (first_value * second_value
+          + third_value / fourth_value)
+```
+
+If you do this, linters like the continuation to line up with the first character under the bracket on the line above. Breaking lines that contain long strings is harder. If you have:
+
+```python
+print("this is a very very very very very very very very very very very very very long string")
+```
+
+Your options are:
+
+```python
+print("this is a very very very very very very very "
+      + "very very very very very very very very very "
+      + "very very long string")
+```
+
+Or the version below – if there are two strings next to each other without a plus, python just joins them anyway
+
+```python
+print("this is a very very very very very very very "
+      "very very very very very very very very very "
+      "very very long string")
+```
+
 ## Objects in Python
 
 Python is an Object-Oriented (OO) language, and pretty well everything in Python (including variables which we have thought of as ‘just numbers’) is actually an object. We’ve been calling them variables and thinking of them as just boxes to store things in for (a) simplicity, and (b) compatibility with other languages, in which simple non-object variables normally DO exist. Also, for most of them, most of the time, you don’t have to worry about or care about that fact that they are actually objects.

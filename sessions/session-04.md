@@ -149,44 +149,6 @@ The opposite of *split*. Join takes a container (e.g. a list, normally a list of
 
 # Topics
 
-## Breaking up long lines
-
-Sometimes your lines will get too long (the linter will complain, and it IS best to avoid them). You can break lines with \ like so:
-
-```python
-variable_with_a_possibly_over_verbose_name =\
-      not_quite_so_verbose_variable_name * 2
-```
-
-Or inside brackets, or square brackets, you can just put a line break in without worrying, e.g.
-
-```python
-result = (first_value * second_value
-          + third_value / fourth_value)
-```
-
-If you do this, linters like the continuation to line up with the first character under the bracket on the line above. Breaking lines that contain long strings is harder. If you have:
-
-```python
-print("this is a very very very very very very very very very very very very very long string")
-```
-
-Your options are:
-
-```python
-print("this is a very very very very very very very "
-      + "very very very very very very very very very "
-      + "very very long string")
-```
-
-Or the version below – if there are two strings next to each other without a plus, python just joins them anyway
-
-```python
-print("this is a very very very very very very very "
-      "very very very very very very very very very "
-      "very very long string")
-```
-
 ## Lists
 
 The Python list class is a container class (see above); list objects hold a number of *elements*, each of which can be any Python object. Lists can hence hold numbers (e.g. 1,3,7 etc), strings ("this","is","a","list"), or combinations of these or any other type (e.g. 4.7, 4, True, "text"). Lists are ordered, and elements are referred to with an *index*, i.e. their position in the list (starting at 0 not 1). So in the list of four string elements "one", "two", "three", "four", the index of the element "three" is 2 (it's the third element, but we start counting at 0 not at 1, so indices are 0, 1, 2 and 3). Lists can be any length, including length 0 – we refer to a list of length 0 as an empty list.
