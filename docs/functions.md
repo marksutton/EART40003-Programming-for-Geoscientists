@@ -32,7 +32,7 @@ Provides a simple way to get values from a user while the program is running. `i
 **Returns:** floating point number<br>
 **Origin:** built-in
 
-Takes a value and tries to convert it into a number (technically a floating point number - discussed in a later lecture). Normally used to convert a string (e.g. from an `input` function) into a number for calculation. If the value cannot be converted (e.g. `"4.5"` can be converted, `"Forty-two"` cannot), the `float` function will throw an error and stop the program.
+Takes a value and tries to convert it into a number (technically a [floating point number](definitions.md#floating-point-number)). Normally used to convert a string (e.g. from an `input` function) into a number for calculation. If the value cannot be converted (e.g. `"4.5"` can be converted, `"Forty-two"` cannot), the `float` function will throw an error and stop the program.
 
 ## `int(value)`
 
@@ -40,5 +40,40 @@ Takes a value and tries to convert it into a number (technically a floating poin
 **Origin:** built-in
 
 Takes a value and tries to convert it into an integer (i.e. a whole number). Normally used to convert a string containing an integer (e.g. from an `input` function) into a number for calculation, but it can also convert a floating-point number such as `2.5` into an integer. When converting a floating-point number, `int` **truncates towards zero**: for example, `int(3.9)` gives `3`, while `int(-5.8)` gives `-5`. This is not the same as rounding to the nearest integer; use `round()` if that is what you need. If a value cannot be converted, `int` throws an error and stops the program. For example, the string `"4"` can be converted, but `"4.5"` and `"Forty-two"` cannot.
+
+## `abs(number)`
+
+**Returns:** number<br>
+**Origin:** built-in
+
+Takes a number (either an int or a float), and returns the same type with the negative sign stripped off (if there was one). Abs is short for ‘absolute’.
+
+## `chr(int)`
+
+**Returns:** string<br>
+**Origin:** built-in
+
+Takes an integer argument, and returns a single-character string using the ASCII coding system – see e.g. <http://www.asciitable.com/> for a list of codes). Will give an error if the number used as an argument can’t be converted to a valid ASCII code.
+
+## `len(str)`
+
+**Returns:** int<br>
+**Origin:** built-in
+
+Takes a string as an argument, and returns the number of characters in the string. This is one of the few string functions which is a normal function, rather than a method of str – so use it like **len(“hello”)** not **“hello”.len()**
+
+## `ord(string)`
+
+**Returns:** int<br>
+**Origin:** built-in
+
+Takes a string of length 1 (i.e. a single-character string) and returns the ASCII code representing it – see e.g. <http://www.asciitable.com/> for a list of codes). Will give an error if the string isn’t length 1.
+
+## `str(value)`
+
+**Returns:** string<br>
+**Origin:** built-in
+
+Takes a value and tries to convert it into a string. Will work with most variable types
 
 [Return to the site index](index.md)

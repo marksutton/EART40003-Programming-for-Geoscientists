@@ -65,6 +65,6 @@ Finally (but less commonly useful) there is also a *not* Boolean operator, which
 - Missing off the variable name in second condition of an and/or. This is a very common 'rookie' error, because in English, **`a>10 or <0`** makes perfect sense. It doesn't to Python! You need **`a > 10 or a < 0`**.
 - Misunderstanding order of evaluation of complex conditions - see above - use brackets to control it, don't assume you know which order things happen in.
 - Mixing types in an illegal way, e.g. **`a < 5`** is illegal if *a* is a string.
-- Trying to do precise (`==` or `!=`) comparisons with floating point (i.e. non-integer) numbers. These don't always work. This is a counterintuitive and complex issue, which we will cover properly next week. Ignore for now... but keep it at the back of your mind.
+- Trying to do precise (`==` or `!=`) comparisons with floating point (i.e. non-integer) numbers. These don't always work. See [Floating point number](definitions.md#floating-point-number) for an explanation and an example of comparing with a small tolerance.
 
 [Return to the site index](index.md)

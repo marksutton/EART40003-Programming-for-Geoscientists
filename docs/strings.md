@@ -91,4 +91,72 @@ print(f"Result is {my_variable:07.3f}")
 
 There IS more to the complex world of string formatting, but the examples above should cover most of what you want to do. See e.g. <https://www.w3schools.com/python/python_string_formatting.asp> for more details if you need them.
 
+## String slicing syntax
+
+Python provides a flexible and easy-to-use way to extract bits of strings (compared to many other languages, which often make heavy-going of this). This involves appending the string with [x:y], where x is the first character you want, and y is the first character that you don’t want – so if you want characters 3-7, x will be 3, y will be 8. If you only want one character at position x, you can write [x]. There are a few shortcuts and conventions to this, which are best explained by example (so see examples below). Counting starts at 0 (so “hello”[1] is “e” not “h”). You can put the [] after a string value in quotes, or a string variable, or even a string expression – so **(string1 + string2)[10:20]** is legal Python – meaning join string2 to string1, then give me the string between character 10 and 20 of the combined string. Note the brackets – this makes sure that the joining is done before the slicing (just like brackets in numerical expressions). Some examples of string-slicing:
+
+| Expression | Meaning – Value | Expression | Meaning - Value |
+| --- | --- | --- | --- |
+| `"slicing"[0]` | Character 0 - `"s"` | `"slicing"[4:]` | Character 4 to end – `"ing"` |
+| `"slicing"[1:3]` | Characters 1-2 – `"li"` | `"slicing"[-4:-2]` | Characters 4<sup>th</sup> from end to 3<sup>rd</sup> from end – `"ci"` |
+| `"slicing"[:5]` | Start to character 4 – `"slici"` | `"slicing"[-4:]` | Characters 4<sup>th</sup> from end to end (i.e. last 4 characters) – `"cing"` |
+
+## String methods
+
+These are methods not functions, so the syntax uses the ‘.’ after an object of type str. For example, use **"hello".capitalize()** not **capitalize("hello")**. There are many string methods – not all are listed here, and for some that are there are optional extra arguments that I do not document here.
+
+### `capitalize()`
+
+**Returns:** str
+
+Returns a version of the string with the initial letter capitalized.
+
+### `count(substring)`
+
+**Returns:** int
+
+Counts how many times ‘substring’ occurs in the string, then returns this count (which may be 0) as an integer.
+
+### `find(substring)`
+
+**Returns:** int
+
+Returns the index (position) of the first occurrence of ‘substring’ occurs in the string. If substring isn’t found, it returns -1.
+
+### `isalpha()`
+
+**Returns:** bool
+
+Returns True if all characters in the string are letters, otherwise returns False
+
+### `isnumeric()`
+
+**Returns:** bool
+
+Returns True if all characters in the string are digits, otherwise returns False
+
+### `lower()`
+
+**Returns:** str
+
+Returns a copy of the string with all characters converted to lowercase.
+
+### `replace(oldtext, newtext)`
+
+**Returns:** str
+
+Returns a copy of the string in which all occurrences of the text *oldtext* are replaced with *newtext*.
+
+### `strip()`
+
+**Returns:** str
+
+Returns a copy of the string with any whitespace characters (spaces, tabs, newlines) removed from both the start and end
+
+### `upper()`
+
+**Returns:** str
+
+Returns a copy of the string with all characters converted to uppercase.
+
 [Return to the site index](index.md)
