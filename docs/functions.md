@@ -55,12 +55,16 @@ Takes a number (either an int or a float), and returns the same type with the ne
 
 Takes an integer argument, and returns a single-character string using the ASCII coding system – see e.g. <http://www.asciitable.com/> for a list of codes). Will give an error if the number used as an argument can’t be converted to a valid ASCII code.
 
-## `len(str)`
+<a id="lenstr"></a>
+
+## `len(container)`
 
 **Returns:** int<br>
 **Origin:** built-in
 
 Takes a string as an argument, and returns the number of characters in the string. This is one of the few string functions which is a normal function, rather than a method of str – so use it like **len(“hello”)** not **“hello”.len()**
+
+The len function, which we have seen used on strings, also works on containers such as lists – it returns the number of elements.
 
 ## `ord(string)`
 
@@ -75,5 +79,33 @@ Takes a string of length 1 (i.e. a single-character string) and returns the ASCI
 **Origin:** built-in
 
 Takes a value and tries to convert it into a string. Will work with most variable types
+
+## `min(container)`
+
+**Returns:** varies<br>
+**Origin:** built-in
+
+Use on any container (e.g. a list) to find the minimum value. Works on numerical and string elements – for string elements, it will give you the alphabetically first value.
+
+## `max(container)`
+
+**Returns:** varies<br>
+**Origin:** built-in
+
+Use on any container (e.g. a list) to find the maximum value. Works on numerical and string elements – for string elements, it will give you the alphabetically last value.
+
+## `range(start, stop, [step])`
+
+**Returns:** weird list-like thing of ints<br>
+**Origin:** built-in
+
+Generates an iterable/container thing (like a list, but actually not a list) containing integers between *start* and *stop* (but not including stop), advancing in *step* increments. *Step* is an optional argument – if you omit it, *step* is 1. So **range(1,5)** gives you [**1,2,3,4]** and **range (1,10,3)** gives you **[1,4,7]**. If you use range with only ONE argument, that argument is treated as a stop value and the implicit start is 0, so **range(5)** represents the values **[0,1,2,3,4]**. IMPORTANT: *range* does NOT return a list. Some websites may tell you it does (and it did in older versions of Python), but actually in Python 3 it returns a quirky thing called an "immutable sequence type", which you are probably not going to come across in any other context. It’s a bit like a list – but not quite a list. This return value *is* an 'iterable' at least, so the for loop construction works fine with it - e.g. **for i in range(0,5):**. It is legal to print a range object, but this does not print its contained values as though it were a list: in the course Python 3.14 environment, **print(range(5))** displays a representation such as **range(5)**. If you want the actual values as a list, use **list(range(...))**, so e.g. **list_0_to_10 = list(range(0,11))** works.
+
+## `sum(container)`
+
+**Returns:** number<br>
+**Origin:** built-in
+
+Use on any container (e.g. a list) to find the sum of all values in the container. Works on numerical but not string elements.
 
 [Return to the site index](index.md)

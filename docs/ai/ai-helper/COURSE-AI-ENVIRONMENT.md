@@ -2,9 +2,13 @@
 
 **Module:** Programming for Geoscientists (EART40003 / ESE 40003; both codes are used)
 **Environment:** Thonny 5.0.0 with the ESE Teaching Tools plug-in
-(`thonny-teaching-tools` 1.0.1)
+(`thonny-teaching-tools` 1.0.2)
 **Repository revision inspected:** `eb84cdd`
 **Date inspected:** 2026-09-27
+**Current release update:** 2026-10-20 — the module coordinator confirmed
+plug-in **1.0.2**, which fixes a bug that stopped variable types appearing in
+the Variables window. The inspection revision and original test results below
+remain the baseline evidence.
 
 Imported from the briefing prepared by the agent working in the Thonny plug-in
 repository. Verification labels and test results below describe that agent's
@@ -30,7 +34,7 @@ observed by the author of this document · **[?]** unknown.
 |---|---|---|
 | Thonny | **5.0.0** | Pinned. Students install the copy distributed with the course, not the current release from thonny.org. **[V]** |
 | Python (student code) | **3.14.4** | Bundled inside Thonny; students do **not** install Python separately. **[V]** |
-| Plug-in | **thonny-teaching-tools 1.0.1** | **[V]** |
+| Plug-in | **thonny-teaching-tools 1.0.2** | Current course release; module coordinator update, 2026-10-20 |
 | Ruff | **0.16.7** exactly | Pinned to an exact version, not a range. **[V]** |
 | Pillow | ≥ 9 | **[V]** |
 
@@ -66,7 +70,7 @@ searching. The procedure is in the course's own setup guide (see §8); in short:
 1. Run the Thonny installer, accept defaults, and launch Thonny once. At first
    launch, leave language on **English (US)** and settings on **Standard**.
 2. `Tools → Manage plug-ins...` → click **here** under *Install from local
-   file* → choose the downloaded `thonny_teaching_tools-…-py3-none-any.whl`.
+   file* → choose the downloaded `thonny_teaching_tools-1.0.2-py3-none-any.whl`.
 3. **Restart Thonny.** Plug-ins load only at startup.
 
 > **This is the single most important installation fact.** The plug-in must be
@@ -91,7 +95,7 @@ In order of reliability:
    bottom of the page. **[V]** Ask for this version in any support exchange.
 3. For a definitive answer, `Tools → Open Thonny data folder...` and open
    `frontend.log`. A working install logs a line containing
-   `thonny-teaching-tools 1.0.1 loaded`. **[V]** Its **absence** means the
+   `thonny-teaching-tools 1.0.2 loaded`. **[V]** Its **absence** means the
    plug-in did not load — most often the `Manage packages` mistake above.
 
 If a student reports "installed but nothing appears", 3 distinguishes "did not
@@ -222,6 +226,12 @@ one worth teaching; "faster" behaves more like a conventional debugger.
   *Resume* while paused). **[V]**
 
 ### Plug-in feature: the Type column
+
+> **Version 1.0.2 fix:** This release fixes a bug that stopped variable types
+> appearing in the Variables window. If types are missing, check the plug-in
+> version in `Tools → Options → Code Check`. Install the course-supplied 1.0.2
+> wheel through `Manage plug-ins` and restart Thonny. If the problem persists,
+> email the module coordinator (Mark Sutton).
 
 The plug-in adds a **`Type` column** showing each variable's real runtime type
 (`int`, `str`, `list`, `numpy.ndarray`, …) — not a guess, but the actual type
@@ -475,7 +485,7 @@ email address; use the contact details supplied through the course.
 
 ### What was inspected
 
-Repository at revision `eb84cdd`, plug-in version 1.0.1, on 2026-09-27;
+Baseline repository at revision `eb84cdd` on 2026-09-27;
 Thonny 5.0.0's own installed source; and the course setup guide
 `ThonnySetup.pdf`.
 

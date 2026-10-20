@@ -159,4 +159,18 @@ Returns a copy of the string with any whitespace characters (spaces, tabs, newli
 
 Returns a copy of the string with all characters converted to uppercase.
 
+### `split(split_on)`
+
+**Returns:** list (of strings)
+
+Splits a string on the substring *split_on* into a list of strings. For example, **"goodbye cruel world".split(" ")** returns **["goodbye", "cruel", "world"]**. *split_on* is normally one a one-character string, but it doesn't have to be.
+
+### `join(container)`
+
+**Returns:** string
+
+The opposite of *split*. Join takes a container (e.g. a list, normally a list of strings) as an argument and joins all the elements together into a single string, using the object string as a separator. For example, **",".join(["goodbye", "cruel", "world"])** returns the string **"goodbye,cruel,world".**
+
+Use **",".join(mylist)** not **join(mylist,",")**.
+
 [Return to the site index](index.md)

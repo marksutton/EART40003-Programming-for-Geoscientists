@@ -59,6 +59,22 @@ Finally (but less commonly useful) there is also a *not* Boolean operator, which
 | `not (a > 10)` | False if a is more than 10, True if a is 10 or lower |
 | `not (a == b)` | False if the values of a and b are precisely equal, otherwise True. This is precisely equivalent to `a != b`. |
 
+## 'in' in conditions
+
+A nice simple feature! You can use the keyword *in* to find out whether an element is in a list (or in any type of container class). The condition:
+
+<div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
+<p style="margin:0"><em>check_element</em> <strong>in</strong> <em>container</em></p>
+</div>
+
+
+is True if there is one or more element in *container* matching the *check_element*. e.g.
+
+```python
+if "one" in number_list:
+    print("'One' found in the list")
+```
+
 ## Common errors
 
 - Using a single equals sign. Single equals assigns values to variables. Use double equals for comparisons.

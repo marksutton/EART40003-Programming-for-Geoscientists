@@ -1,6 +1,6 @@
 # While loops
 
-Loops - code blocks executed repeatedly - are fundamental to most non-trivial programs. Python has two types of loops - `while` loops, and `for` loops (we will cover `for` loops later). `while` loops are very simple in concept, and are general-purpose loops. They begin with a `while` statement that contains a condition, which is followed by one or more lines of code to be executed repeatedly, as long as the condition continues to be true. This code has to be indented to tell Python which lines are within the while block.
+Loops - code blocks executed repeatedly - are fundamental to most non-trivial programs. Python has two types of loops - `while` loops, and [`for` loops](for.md). `while` loops are very simple in concept, and are general-purpose loops. They begin with a `while` statement that contains a condition, which is followed by one or more lines of code to be executed repeatedly, as long as the condition continues to be true. This code has to be indented to tell Python which lines are within the while block.
 
 <div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">
 <p style="margin:0"><strong>while <em>condition</em>:</strong></p>

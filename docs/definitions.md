@@ -4,6 +4,10 @@
 
 See Function.
 
+## Array
+
+A simple type of *container* not actually available in Python (though see Numpy arrays in session 7), but commonly used in other languages. Arrays are a bit like lists, but (a) often have a fixed number of elements, and (b) normally require all elements to be of the same type.
+
 ## Boolean
 
 A Boolean value (named after the mathematician George Boole) is one that can only have one of two values, normally expressed as True or False.
@@ -20,13 +24,27 @@ The ‘blueprint’ for an Object. See [*object*](#object) for a proper discussi
 
 Text inserted into a program for the sole-purpose of human-readability. Comments have no effect on the actual running of the program, but are an essential part of programming nonetheless. Turning statements into comments is also a convenient way to temporarily remove a line from your program, without permanently deleting it.
 
+## Comprehension
+
+A Python term for a syntax-construction that enables you to do certain container iteration tasks with very little typing. See [List comprehensions](list-comprehensions.md). Depending on who you ask, comprehensions are either wonderful labour-saving constructions that make everyone's life easier, or hellish syntactical minefields that wreck code-readability and hamper debugging.
+
 ## Condition
 
 Something that a programming language can evaluate to a [*Boolean*](#boolean) value (a True or False), and hence use as the basis of a decision that affects program flow.
 
+<a id="container"></a>
+
+## Container (or container class, or collections class, or iterable – for the purposes of this course you can treat these as meaning the same thing)
+
+An object comprising multiple *elements*. The most obvious and useful example in Python is the *list* class – lists contain a number of elements in some defined order, referred to by their index number. Other containers exist (sets, dictionaries and tuples are the most encountered ones – not dealt with this week – plus an odd list-like one that is returned by the [*range* function](functions.md#rangestart-stop-step))
+
 ## Debugger
 
 A debugger (properly symbolic debugger) is a piece of software that enables a programmer to step through a program line-at-a-time, watching variable values, and following exactly what their program is doing. This is not the only way to debug a program, but is often the easiest way. Debuggers can either be set to step through programs when the user presses a key, or to run the program as normal (full-speed mode) until it reaches a predefined point (a *breakpoint*).
+
+## Element
+
+an individual item in a *container*.
 
 ## Exception
 
@@ -56,6 +74,14 @@ A program/application (same thing) designed to bring all the tools you need for 
 
 Bring a module (=library) into your program so you can use it.
 
+## Iterable
+
+A Python term for anything that can be *iterated* over – in practice, this is much the same thing as a *container*.
+
+## Iterating
+
+looping. We often talk about 'iterating over a list', which means executing a loop to look at each element in turn.
+
 ## Library
 
 See Module. Module is more commonly used in Python, but other languages prefer library. They mean the same thing.
@@ -63,6 +89,10 @@ See Module. Module is more commonly used in Python, but other languages prefer l
 ## Linting
 
 Automatic checking of code for "style issues" or errors, underlining them in red. Thonny has a built-in linter, that will underline issues for you. These might be genuine errors, or they might just be ways in which your code isn't quite laid out according to standards. The latter might (will!) all seem like very minor issues, but consistently laid out code really is easier for other people to read, so try to follow these rules.
+
+## List
+
+A simple type of *container* class. See [Lists](lists.md) for details of Python lists.
 
 ## Method
 
