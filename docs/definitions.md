@@ -60,7 +60,7 @@ The normal method of storing non-integer numbers in a computer. Floating point n
 
 ## Function
 
-A separate piece of code that "does something". Functions usually have to be given (passed) one or more values to work on. These passed values are called arguments. Many functions also pass a value back to the main program that launched (called) them. Some functions you will create yourself. Others are built into Python (e.g. the `print` function). Others are written by third parties, and you have to import them. Python function syntax (much the same as in all programming languages) is explained in the Topics section.
+A separate piece of code that "does something". Functions usually have to be given (passed) one or more values to work on. These passed values are called arguments. Many functions also pass a value back to the main program that launched (called) them. Some functions you will create yourself. Others are built into Python (e.g. the `print` function). Others are written by third parties, and you have to import them. Python function syntax (much the same as in all programming languages) is explained under [User-defined functions](user-functions.md).
 
 ## Integer
 
@@ -72,7 +72,7 @@ A program/application (same thing) designed to bring all the tools you need for 
 
 ## Import
 
-Bring a module (=library) into your program so you can use it.
+The process of bringing a module, package, or library into your program so you can use it – this is a general term used in many languages, though most don’t actually use the keyword ‘import’ to do it (Python does).
 
 ## Iterable
 
@@ -82,9 +82,17 @@ A Python term for anything that can be *iterated* over – in practice, this is 
 
 looping. We often talk about 'iterating over a list', which means executing a loop to look at each element in turn.
 
+## Keyword Argument (commonly abbreviated to kwarg)
+
+An alternative syntax for passing arguments to functions or methods. Using kwargs allows you to put arguments in any order, and by providing names for them in your function call, to improve code readability. Not all built-in functions support kwargs, but you can always use them with user-defined functions.
+
+## Kwarg
+
+Abbreviation of [*Keyword Argument*](user-functions.md#keyword-arguments-kwargs)
+
 ## Library
 
-See Module. Module is more commonly used in Python, but other languages prefer library. They mean the same thing.
+See [Module](#module). Module is more commonly used in Python, but other languages prefer library.
 
 ## Linting
 
@@ -100,7 +108,7 @@ a function provided as part of a class, intended to work on the data of that cla
 
 ## Module
 
-A pre-written set of functions for some particular purpose or set of purposes that you can bring into your program (import). There are many modules for Python already installed on your computer.
+A set of functions (and other stuff\*) that you can *import* into your program to provide extra functionality. Package and library are not quite synonyms of module, as both terms can be used for groups of related modules as well as single one. In python, at its simplest, a module is simply a .py file in which functions are defined. \*The ‘other stuff’ sometimes includes definitions of constants (e.g. math.pi), and definitions of classes with methods for complex data-types.
 
 ## Nesting
 
@@ -144,9 +152,17 @@ Text (called a string as text is a string of characters).
 
 A programming error that is detected before the program runs… things like missing brackets or colons, or other unambiguously illegal code.
 
+## Tuple
+
+Tuples are ‘lightweight lists’ – they work a lot like lists, except that you can’t change them once they have been created. They are used for, among other things, returning multiple values from functions. Tuples do exist in some other languages, but far from all.
+
 ## Type
 
 (of variables or other data). The type of information stored, and/or the coding scheme used to store them. Understanding what *type* your variables are is critical to understanding what is going on in a program. Simple variable types in Python are int (short for *Integer*), float (short for *Floating point number*), bool (short for *Boolean*, i.e. a True/False variable) and str (string).
+
+## User Defined Function
+
+A function that you write, as part of your program. See [User-defined functions](user-functions.md).
 
 ## Variable
 

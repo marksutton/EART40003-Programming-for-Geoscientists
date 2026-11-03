@@ -17,7 +17,7 @@ You can also make an empty list with
 empty_list = list()      # Make an empty list (with no elements, ready to have some added later)
 ```
 
-Think of this use of *list* as if it were a built-in function that makes a list\*. If you give it no argument (as above) it gives you an empty list, but if you give it 'something list-like' as an argument, it will turn it into an actual list. By 'something list-like' (and I'm being deliberately vague here), in practice I mean either the return result of the [range function](functions.md#rangestart-stop-step), or a 'tuple' – we'll cover tuples later in the course. So…
+Think of this use of *list* as if it were a built-in function that makes a list\*. If you give it no argument (as above) it gives you an empty list, but if you give it 'something list-like' as an argument, it will turn it into an actual list. By 'something list-like' (and I'm being deliberately vague here), in practice I mean either the return result of the [range function](functions.md#rangestart-stop-step), or a [tuple](tuples.md). So…
 
 ```python
 one_to_ten_list = list(range(1,11))  # Make a list [1, 2… 9, 10]

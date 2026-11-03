@@ -108,4 +108,8 @@ Generates an iterable/container thing (like a list, but actually not a list) con
 
 Use on any container (e.g. a list) to find the sum of all values in the container. Works on numerical but not string elements.
 
+## Writing functions and using modules
+
+See [User-defined functions](user-functions.md) for defining your own functions, returning values, local/global variables and keyword arguments. See [Importing modules](modules.md) for functions from libraries and multi-file projects.
+
 [Return to the site index](index.md)

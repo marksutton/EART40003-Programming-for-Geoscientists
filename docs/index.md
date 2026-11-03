@@ -1,6 +1,6 @@
 This is the cumulative reference site for EART40003 Programming for Geoscientists.
 
-The site currently contains material introduced in Sessions 1–4. It will grow as later sessions are integrated.
+The site currently contains material introduced in Sessions 1–5. It will grow as later sessions are integrated.
 
 Students can also use the [AI tutor package](ai/index.md) for learning support, with
 all eight session handouts and course demonstrations available from the start.
@@ -21,3 +21,6 @@ all eight session handouts and course demonstrations available from the start.
 - [Lists and list methods](lists.md)
 - [For loops](for.md)
 - [List comprehensions](list-comprehensions.md)
+- [Importing modules and multi-file projects](modules.md)
+- [User-defined functions, scope and keyword arguments](user-functions.md)
+- [Tuples](tuples.md)
