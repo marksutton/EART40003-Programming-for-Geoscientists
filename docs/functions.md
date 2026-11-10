@@ -108,6 +108,13 @@ Generates an iterable/container thing (like a list, but actually not a list) con
 
 Use on any container (e.g. a list) to find the sum of all values in the container. Works on numerical but not string elements.
 
+## `open(filename, mode)`
+
+**Returns:** file<br>
+**Origin:** built-in
+
+Tries to open the file with the given filename, in the given mode. Both arguments must be strings. See [Opening a file](files.md#opening-a-file) for notes on filenames. *Mode* is a single-character string – it should be “w” for write-mode, “r” for read-mode, or “a” for append mode (append mode is like write mode, but if the file already exists then new data is appended to the end – in write mode it is overwritten). If the file can’t be opened (see [Opening a file](files.md#opening-a-file) for possible reasons) an exception will be thrown. The *open* function returns a *file* object, which is then used for all further file operations – see [File methods](files.md#file-methods) for details of methods of this object.
+
 ## Writing functions and using modules
 
 See [User-defined functions](user-functions.md) for defining your own functions, returning values, local/global variables and keyword arguments. See [Importing modules](modules.md) for functions from libraries and multi-file projects.

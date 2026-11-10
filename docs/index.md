@@ -1,6 +1,6 @@
 This is the cumulative reference site for EART40003 Programming for Geoscientists.
 
-The site currently contains material introduced in Sessions 1–5. It will grow as later sessions are integrated.
+The site currently contains material introduced in Sessions 1–6. It will grow as later sessions are integrated.
 
 Students can also use the [AI tutor package](ai/index.md) for learning support, with
 all eight session handouts and course demonstrations available from the start.
@@ -24,3 +24,6 @@ all eight session handouts and course demonstrations available from the start.
 - [Importing modules and multi-file projects](modules.md)
 - [User-defined functions, scope and keyword arguments](user-functions.md)
 - [Tuples](tuples.md)
+- [File handling and file methods](files.md)
+- [Dictionaries and dictionary methods](dictionaries.md)
+- [Sets and set methods](sets.md)

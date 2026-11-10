@@ -61,6 +61,8 @@ Finally (but less commonly useful) there is also a *not* Boolean operator, which
 
 ## 'in' in conditions
 
+For membership in dictionaries and sets, see [Dictionaries](dictionaries.md#differences-between-dictionaries-and-lists) and [Sets](sets.md).
+
 A nice simple feature! You can use the keyword *in* to find out whether an element is in a list (or in any type of container class). The condition:
 
 <div class="syntax-template" style="font-family:inherit; background:#f4f7fa; border-left:3px solid #5483bc; padding:0.5em 0.8em; margin:0.8em 0">

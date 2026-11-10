@@ -2,7 +2,7 @@
 
 This is where it starts to get a bit complicated. List comprehensions are Python 'shortcuts' which combine list creation with loops into a single statement. They are very efficient in terms of the amount of typing you have to do – it's very common to want to create a list using a loop, and being able to do this in one go with a single line of code is undeniably useful. They are, however, rather 'syntactically dense', i.e. difficult to get your head around when you first see them. Their use is completely optional in Python - there is nothing that they do that you can't do in other ways – but even if you don't use them you ought to be able to recognise and understand them so that you can understand other people's code. As far as assessment for this module goes, they aren't essential – but using them well and appropriately is the sort of thing that will get you an extra mark or two. If they completely do your head in, then you may be better off just avoiding them as much as possible.
 
-There are also comprehensions for other container types – we'll deal with these later in the course. If you don't like list comprehensions, then you are *really* going to hate dictionary comprehensions. Just warning you in advance!
+There are also comprehensions for other container types, but dictionary comprehensions are [not taught in this course](dictionaries.md#using-dictionary-methods). If you don't like list comprehensions, then you are *really* going to hate dictionary comprehensions. Just warning you in advance!
 
 See [For loops](for.md) for the loop syntax used here.
 
