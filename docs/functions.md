@@ -115,6 +115,35 @@ Use on any container (e.g. a list) to find the sum of all values in the containe
 
 Tries to open the file with the given filename, in the given mode. Both arguments must be strings. See [Opening a file](files.md#opening-a-file) for notes on filenames. *Mode* is a single-character string – it should be “w” for write-mode, “r” for read-mode, or “a” for append mode (append mode is like write mode, but if the file already exists then new data is appended to the end – in write mode it is overwritten). If the file can’t be opened (see [Opening a file](files.md#opening-a-file) for possible reasons) an exception will be thrown. The *open* function returns a *file* object, which is then used for all further file operations – see [File methods](files.md#file-methods) for details of methods of this object.
 
+## NumPy functions
+
+[note – these are all *NumPy* functions, they are not built-in. You will need to import `numpy` to use them]
+
+### `linspace(start, stop, count)`
+
+**Returns:** array<br>
+**Origin:** NumPy
+
+*linspace* returns a NumPy array of *count* evenly spaced numbers between (and including) the *start* and *stop* values. For example, **linspace(0,5,10)** returns **[0. 0.55555556 1.11111111 1.66666667 2.22222222 2.77777778 3.33333333 3.88888889 4.44444444 5.].** *linspace* is similar in some ways to the built-in range function, but returns floating point numbers not integers. It has all sorts of uses – one is in plotting graphs. If you have a function that that takes a value x and returns y, just use linspace to generate a range of x values, and then use these to generate your y values. NOTE – unlike range, the ‘stop’ value for *linspace* IS the last value generated (range stops at the stop value – 1).
+
+### `transpose(array)`
+
+**Returns:** array<br>
+**Origin:** NumPy
+
+Transposes a multidimensional array (swaps rows and columns]. No effect on one-dimensional arrays.
+
+### `zeros(size)`
+
+**Returns:** array<br>
+**Origin:** NumPy
+
+*zeros* (make sure you don’t spell it zeroes) creates an array with elements initialised to zero (as a floating point type). To create a 1-dimensional array (a vector), just use a number for size, e.g. **zeros(3)** to create [**0. 0. 0.]**. To create a multidimensional array, pass a *tuple* as an argument, specifying the sizes of each dimension of the array. So for a two-dimensional array (a table) with sizes 10 and 5, use **zeros((10,5))**. Note the double-brackets – this is because the argument is a tuple.
+
+### Mathematical functions
+
+– NumPy includes a lot of maths functions, including pretty well everything that’s in the math module, and some more besides. You need the NumPy version if you are going to use them with vectorization. I’m not listing these here - just look them up, e.g. at  https://www.geeksforgeeks.org/numpy-mathematical-function/. A lot of these (e.g. sin) have the same name as functions in the math module – if you import both, avoid the import * syntax! You have been warned…
+
 ## Writing functions and using modules
 
 See [User-defined functions](user-functions.md) for defining your own functions, returning values, local/global variables and keyword arguments. See [Importing modules](modules.md) for functions from libraries and multi-file projects.

@@ -6,7 +6,7 @@ See Function.
 
 ## Array
 
-A simple type of *container* not actually available in Python (though see Numpy arrays in session 7), but commonly used in other languages. Arrays are a bit like lists, but (a) often have a fixed number of elements, and (b) normally require all elements to be of the same type.
+an array is a general programming term for a simple container which contains a certain number of elements of the same type. Python does not contain arrays – lists are similar, but more flexible – but the Numerical Python (*NumPy*) module uses an array class at its core. These arrays are properly called *NumPy arrays*, but we will often just refer to them as *arrays*.
 
 ## Boolean
 
@@ -126,6 +126,10 @@ A set of functions (and other stuff\*) that you can *import* into your program t
 
 Putting a program structure inside another program structure. Pretty well anything can be nested in programming, including function calls, if statements, loops etc. Nesting takes two forms in Python. Nesting within expressions - e.g. `float(input("hello"))` - consists of brackets within brackets (innermost always happens first). Nesting of control structures (`if`, `while` etc.) is done using indentation. Most languages encourage this indentation for readability, but in Python it is mandatory.
 
+## NumPy
+
+short for Numerical Python – a 3<sup>rd</sup> party module *very* widely used in numerical and scientific applications – although it’s NOT part of core python, you are likely to use it in a lot of programs. The most important thing it provides is a high-performance *array* class which supports vectorization – see [*Array*](#array) – but there are many useful functions as well. NumPy is meant to be pronounced to rhyme with ‘pie’, not with ‘pea’. I may ignore this .
+
 ## Object
 
 An instance of a *Class*. The distinction between objects and classes in Python can be confusing and is a little blurry because of some esoteric aspects of the language design (if you Google this you will find some people telling you that classes are also objects in Python, which though true is very unhelpful). For the purposes of this course, think of a *class* as a particular type of data together with some functions designed to work on that data. The functions are properly called *methods* when they are attached to a class, but they are still functions – they use brackets, have arguments, and return values. The *str* class in Python is a good example of a class – it stores text (obviously), and provides many methods that do things to that text (capitalize(), upper(), lower(), etc.). An object is a particular instance of that class, so when you say my_string = “hello”, you have made an object – an instance of the str class. Classes can thus be thought of as blueprints for objects. See [Objects in Python](objects.md) for more on objects in Python.
@@ -145,6 +149,10 @@ A standardised set of rules for how you should phrase commands to a computer tha
 ## Python
 
 A general-purpose programming language that we are using in this course.
+
+## Recursion
+
+a programming technique in which functions call themselves to implement some algorithm, usually to navigate ‘tree-like’ data. Recursion is not a straightforward technique to use if you are new to programming, but for certain tasks it can be by far the most efficient approach. See [Recursion – advanced and very much optional!](recursion.md) for a fuller explanation, and examples.
 
 ## Return value
 
@@ -183,5 +191,9 @@ A function that you write, as part of your program. See [User-defined functions]
 ## Variable
 
 A variable is best thought of as a box in the computer's memory which can store some value for you to do something with later. Variables have names which the programmer assigns - **these should be chosen to aid readability of the program**, i.e. they should give at least a hint as to what the value is used for (e.g. `age_in_years`, not just `a`). Variables have a "type" - the sort of value they hold (e.g. a string or a number - it's actually much more complex than that, but that will do for now). Once you put a value into a variable, it stays there until the program finishes, or until you put a new value into it.
+
+## Vectorization
+
+Vectorization is a programming technique allowing simple operations to be applied to every element of a container. Normal python containers (lists, dictionaries etc.) do not support vectorization, but *NumPy* arrays do. Vectorization is a huge time-saver, both in terms of time spent writing code, and in execution speed.
 
 [Return to the site index](index.md)

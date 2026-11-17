@@ -29,6 +29,8 @@ More common type: using a comparison operator (e.g. `if a > 10:`). Comparison op
 
 ## 3. Compound conditions
 
+For conditions used to select NumPy array elements, see [Indexing and slicing](numpy.md#indexing-and-slicing).
+
 Often you want more complex conditions. To construct these, use the *and* and *or* 'Boolean operators', e.g. `if a > 10 and b > 10:`
 
 `and` - both of the conditions need to be True  
